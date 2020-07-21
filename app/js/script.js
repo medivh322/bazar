@@ -80,6 +80,9 @@ $(document).ready(function() {
 		$(".article__top-menu").children().eq(1).text(second);
 		$(".article__top-menu").children().eq(2).text(third); 
 	}
+	if($(window).width() < ){
+
+	}
 	$(window).resize(function(){
 		if ($(window).width() < 576) {
 			text("Товары","Торговые точки","Продавцы")
@@ -87,7 +90,6 @@ $(document).ready(function() {
 			text("Каталог товаров","Каталог торговых точек","Каталог продавцов");
 		}
 	});
-
 	// раскрытие в футере
 	// $(".footer__title").click(function(e){
 	// 	let el = $(this); 
