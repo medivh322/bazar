@@ -80,9 +80,7 @@ $(document).ready(function() {
 		$(".article__top-menu").children().eq(1).text(second);
 		$(".article__top-menu").children().eq(2).text(third); 
 	}
-	if($(window).width() < ){
 
-	}
 	$(window).resize(function(){
 		if ($(window).width() < 576) {
 			text("Товары","Торговые точки","Продавцы")
