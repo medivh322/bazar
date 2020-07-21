@@ -1,0 +1,122 @@
+@mixin for-mobile{
+	@media screen and (max-width: 576px){
+		@content;
+	}
+}
+.header{
+	padding: 9px 0 0 0;
+	@include for-mobile{
+		padding: 9px 0 0 0;
+	}
+}
+
+.header__bottom-panel{
+	border-top-left-radius: 48px;
+	border-top-right-radius: 48px;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 84px rgba(0, 0, 0, 0.08);
+	padding: 12px 0 0 0;
+	@include for-mobile{
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+	}
+}
+
+.header__figure-img{
+	background-repeat: no-repeat;
+	width: 195px;
+	height: 85px;
+	@include for-mobile{
+		width: 34px;
+		height: 45px;
+	}
+}
+
+.header__icon{
+	width: 36px;
+	height: 36px;
+	margin: 0 0 4px 0;
+	@include for-mobile{
+		margin: 0;
+	}
+}
+
+.header__right-column{
+	grid-column-gap: 24px;
+	display: grid;
+	grid-template-columns: repeat(3, max-content);
+	grid-template-rows: 1fr;	
+	grid-template-areas: 'a b c';
+	li:nth-child(1){
+		grid-area: a;
+	}
+	li:nth-child(2){
+		grid-area: b;	
+	}
+	li:nth-child(3){
+		grid-area: c;
+	}
+}
+
+.header__nav-ul{
+	display: grid;
+	grid-template-columns: repeat(3, max-content);
+	grid-template-rows: 1fr;	
+	grid-template-areas: 'a b c';
+	grid-column-gap: 24px;
+	li:nth-child(1){
+		grid-area: a;
+	}
+	li:nth-child(2){
+		grid-area: b;	
+	}
+	li:nth-child(3){
+		grid-area: c;
+	}
+	li{
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+		border-bottom: 1px solid #2F993A;
+		&:hover{
+			color: #2F993A;
+		}
+	}
+}
+
+.header__left-column{ /*используй миксин*/
+	display: grid;
+	grid-template-columns: repeat(3, max-content);
+	grid-template-rows: 1fr;	
+	grid-template-areas: 'a b c';
+	grid-column-gap: 72px;
+	.header__figure-img{
+		grid-area: a;
+	}
+	>*:nth-child(3){
+		grid-area: b;	
+	}
+	>*:nth-child(4){
+		grid-area: c;
+	}
+	@include for-mobile{
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;	
+		grid-template-areas: 'a';
+		.header__left-column{
+			grid-area: a;
+		}
+	}
+}
+
+.header__right-column__a{
+	&:hover{
+		color: #2F993A;
+	}
+}
+
+@include for-mobile{
+	.header__right-column__a{
+		font-size: 0;
+	}
+}
