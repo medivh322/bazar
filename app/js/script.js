@@ -5,12 +5,12 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		responsive: [
-			{
-				breakpoint: 576,
-				settings: {
-					arrows: false,
-				}
+		{
+			breakpoint: 576,
+			settings: {
+				arrows: false,
 			}
+		}
 		]
 	});
 	// $(".detail-slider__list").slick({
@@ -88,10 +88,23 @@ $(document).ready(function() {
 			text("Каталог товаров","Каталог торговых точек","Каталог продавцов");
 		}
 	});
+
 	// раскрытие в футере
-	// $(".footer__title").click(function(e){
-	// 	let el = $(this); 
-	// 	let footer_nav = $(this).siblings(".footer__nav"); 
-	// 	console.log($(this));
-	// })
+	$(".footer__title").click(function(e){
+		if ($(window).width() < 576){
+			let footer_title = $(this);
+			let footer_nav = $(this).siblings(".footer__nav").children(".footer__ul"); 
+			$(".footer__ul").not(footer_nav).each(function(i,elem){
+				$(elem).hide("slow");
+				$(elem).parent(".footer__nav").siblings(".footer__title").css("background","url('images/up_footer.png') no-repeat right");
+			});
+			footer_nav.toggle("slow", function(){
+				if ($(this).css("display") == "block") {
+					footer_title.css("background","url('images/done_footer.png') no-repeat right");
+				} else{
+					footer_title.css("background","url('images/up_footer.png') no-repeat right");
+				}
+			});
+		}
+	})
 });

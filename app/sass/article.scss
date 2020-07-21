@@ -239,7 +239,7 @@
 		grid-area: b;
 	}
 	@include for-mobile{
-		margin: 0px;
+		margin: 0 0 24px 0;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: 100px;
 		grid-column-gap: 11px;
@@ -402,6 +402,33 @@
 .footer{
 	padding: 36px 0;
 	background-color: #fbfbfb;
+	position: relative;
+	@include for-mobile{
+		padding: 17px 0;
+	}
+}
+
+ div:not(:first-child) .footer__column{
+	margin: 20px 0 0 0;
+}
+
+.footer__lines{
+	position: absolute;
+	img{
+		position: absolute;
+		background-image: url("../../images/footer-line.png");
+		background-repeat: repeat-x;
+		width: 450px;
+		height: 103px;
+		@include for-mobile{
+			position: absolute;	
+			background-image: url("../../images/footer-line.png");
+			width: 100%;
+			height: 103px;
+			bottom: 54px;
+			right: -12px;
+		}
+	}
 }
 
 .footer__nav{
@@ -415,21 +442,52 @@
 	}
 }
 
+.footer__ul{
+	@include for-mobile{
+		display: none;
+	}
+}
+
 .footer__title{
 	position: relative;
+	background: none;
 	@include for-mobile{
-		&:after{
-			content: url("../../images/up_footer.png");
-			width: 14px;
-			height: 8px;
-			position: absolute;
-			right: 0;
-		}	
+		background: url("../../images/up_footer.png");
+		background-repeat: no-repeat;
+		background-position: right;
+	}
+}
+
+.footer__question{
+	margin: 36px 0 0 0;
+	@include for-mobile{
+		width: 260px;
+		margin: 25px auto 0 auto;
+	}
+}
+
+.footer__right-column{
+	z-index: 2;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, max-content);
+	grid-template-areas: 'a' 'b' 'c';
+	.footer__title{
+		grid-area: b;
+	}
+	.footer__phone{
+		grid-area: c;
+	}
+	.footer__social{
+		grid-area: a;
+	}
+	@include for-mobile{
+		display: block;
 	}
 }
 
 .footer__phone{
-	margin: 16px 0;
+	margin: 16px auto;
 	padding: 16px 32px;
 	background: #FFFFFF;
 	text-align: center;
@@ -437,6 +495,9 @@
 	border-radius: 12px;
 	>*:last-child{
 		margin: 8px 0 0 0;
+	}
+	@include for-mobile{
+		width: 260px;
 	}
 }
 
