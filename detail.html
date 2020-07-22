@@ -193,11 +193,17 @@
 				</div>
 				<div class="col-md-5">
 					<div class="detail-slider">
-						<div class="detail-slider__list">
-
+						<div class="detail-slider__list d-none d-md-block">
+							<img src="images/Rectangle 2 (1).jpg" alt="">
+							<img src="images/Rectangle 2 (1).jpg" alt="">
+							<img src="images/Rectangle 2 (1).jpg" alt="">
+							<img src="images/Rectangle 2 (1).jpg" alt="">
 						</div>
 						<div class="detial-slider__main">
-
+							<img src="images/Rectangle 2 (1).jpg" alt="">
+							<img src="images/Rectangle 2 (1).jpg" alt="">
+							<img src="images/Rectangle 2 (1).jpg" alt="">
+							<img src="images/Rectangle 2 (1).jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -218,7 +224,7 @@
 					</p>
 				</div>
 				<div class="col-md-3">
-					<div class="buy-detail brd-gray">
+					<!-- <div class="buy-detail brd-gray">
 						<div class="stock-card__between-price">
 							<span class="stock-card__price-value fnt-24">160 ₽</span>
 							<span class="stock-card__price-to clr-82 fnt-12">
@@ -227,22 +233,35 @@
 						</div>
 						<button class="stock-card__add-to-card mr-top-bot-12px clr-green fnt-15"><a href="#">Купить</a></button>
 						<span class="clr-82 fnt-12 buy-detail__col-sellers d-flex justify-content-center">Продавцов: 3</span>
+					</div> -->
+					<div class="buy-detail brd-gray">
+						<div class="stock-card__price">
+							<span class="stock-card__price-value fnt-24">160 ₽</span>
+						</div>
+						<div class="d-flex order__counter brd-gray align-items-center justify-content-between mr-top-12px">
+							<button class="clr-green fnt-18" id="buttonMinus">-</button>
+							<input type="number" value="1" min="1" class="order__counter-input fnt-15">
+							<button class="clr-green fnt-18" id="buttonPlus">+</button>
+						</div>
+						<button class="stock-card__add-to-card mr-top-bot-12px clr-green fnt-15"><a href="#">Купить</a></button>
 					</div>
 				</div>
-				<div class="col-md-12 d-flex mr-top-36px">					
-					<div class="col-md-6 d-flex justify-content-start">
-						<h2 class="fnt-24 clr-black">Продавцы и цены</h2>
-					</div>
-					<div class="col-md-6 d-flex fnt-14 align-items-center justify-content-end">
-						<span class="clr-black">Сортировать:</span>
-						<ol class="d-inline-flex sorting">
-							<li class="sorting__item active asc"><a href="#">По цене</a></li>
-							<li class="sorting__item"><a href="#">По рейтингу</a></li>
-						</ol>
-					</div>
+				<div class="col-md-12 mr-top-36px">		
+					<div class="row d-md-flex">
+						<div class="col-md-6 d-flex justify-content-start">
+							<h2 class="fnt-24 clr-black">Продавцы и цены</h2>
+						</div>
+						<div class="col-md-6 d-md-flex fnt-14 align-items-center justify-content-end">
+							<span class="clr-black">Сортировать:</span>
+							<ol class="d-inline-flex sorting">
+								<li class="sorting__item active asc"><a href="#">По цене</a></li>
+								<li class="sorting__item"><a href="#">По рейтингу</a></li>
+							</ol>
+						</div>
+					</div>			
 				</div>
 				<div class="col-md-12">
-					<div class="order brd-gray">
+					<div class="order brd-gray mr-top-16px">
 						<div class="order__item">
 							<div class="row">
 								<div class="col-md-5 d-flex align-items-center">
@@ -264,7 +283,7 @@
 										</ol>
 									</div>
 								</div>
-								<div class="col-md-4 d-flex justify-content-end align-items-center">
+								<div class="col-md-4 d-flex justify-content-md-center align-items-center">
 									<div class="order__right-column d-flex">
 										<span class="d-flex align-items-center fnt-24 clr-black">69 ₽</span>
 										<div class="d-flex order__counter brd-gray align-items-center">
@@ -298,7 +317,7 @@
 										</ol>
 									</div>
 								</div>
-								<div class="col-md-4 d-flex justify-content-end align-items-center">
+								<div class="col-md-4 d-flex justify-content-md-center align-items-center">
 									<div class="order__right-column d-flex">
 										<span class="d-flex align-items-center fnt-24 clr-black">69 ₽</span>
 										<div class="d-flex order__counter brd-gray align-items-center">
@@ -306,7 +325,7 @@
 											<input type="number" value="1" min="1" class="order__counter-input fnt-15">
 											<button class="clr-green fnt-18" id="buttonPlus">+</button>
 										</div>
-										<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">Купить</a></button>
+										<button class="stock-card__add-to-card disabled clr-green fnt-15"><a href="#">Купить</a></button>
 									</div>
 								</div>
 							</div>
@@ -332,7 +351,7 @@
 										</ol>
 									</div>
 								</div>
-								<div class="col-md-4 d-flex justify-content-end align-items-center">
+								<div class="col-md-4 d-flex justify-content-md-center align-items-center">
 									<div class="order__right-column d-flex">
 										<span class="d-flex align-items-center fnt-24 clr-black">69 ₽</span>
 										<div class="d-flex order__counter brd-gray align-items-center">
@@ -350,8 +369,8 @@
 				<div class="col-md-12 padding-36px brd-bottom">
 					<h2 class="article__title clr-black fnt-24">Похожие товары</h2>
 					<div class="stock" style="">
-						<div class="row mr-item-4n">
-							<div class="col-md-3">
+						<div class="row mr-item-4n-2n">
+							<div class="col-md-3 col-6">
 								<div class="stock-card brd-gray">
 									<img class="stock-card__image" src="images/image 1.png">
 									<div class="stock-card__middle-info">
@@ -368,7 +387,7 @@
 									<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">В корзину</a></button>
 								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-3 col-6">
 								<div class="stock-card brd-gray">
 									<img class="stock-card__image" src="images/image 1.png">
 									<div class="stock-card__middle-info">
@@ -379,13 +398,13 @@
 											</span>
 										</div>
 										<div class="stock-card__title stck-js-title">
-											<span class="fnt-14 clr-82 "><a href="#">Напиток Pepsi кола сильногазированный 2 л</a></span>
+											<span class="fnt-14 clr-82 "><a href="#">Напиток сильногазированный Coca-Cola сlassic стекло 0.33 л</a></span>
 										</div>								
 									</div>
 									<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">В корзину</a></button>
 								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-3 col-6">
 								<div class="stock-card brd-gray">
 									<img class="stock-card__image" src="images/image 1.png">
 									<div class="stock-card__middle-info">
@@ -396,13 +415,13 @@
 											</span>
 										</div>
 										<div class="stock-card__title stck-js-title">
-											<span class="fnt-14 clr-82 "><a href="#">Шоколад Молочный Kinder Chocolate 100 г</a></span>
+											<span class="fnt-14 clr-82 "><a href="#">Напиток сильногазированный Coca-Cola сlassic стекло 0.33 л</a></span>
 										</div>								
 									</div>
 									<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">В корзину</a></button>
 								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-3 col-6">
 								<div class="stock-card brd-gray">
 									<img class="stock-card__image" src="images/image 1.png">
 									<div class="stock-card__middle-info">
@@ -413,67 +432,41 @@
 											</span>
 										</div>
 										<div class="stock-card__title stck-js-title">
-											<span class="fnt-14 clr-82 "><a href="#">Шоколад тёмный Бабаевский люкс 100 г</a></span>
+											<span class="fnt-14 clr-82 "><a href="#">Напиток сильногазированный Coca-Cola сlassic стекло 0.33 л</a></span>
 										</div>								
 									</div>
 									<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">В корзину</a></button>
 								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-3 col-6">
 								<div class="stock-card brd-gray">
 									<img class="stock-card__image" src="images/image 1.png">
 									<div class="stock-card__middle-info">
-										<div class="stock-card__price">
+										<div class="stock-card__between-price">
 											<span class="stock-card__price-value fnt-24">160 ₽</span>
-											<span class="stock-card__price-old-value clr-82"><strike>182 ₽</strike></span>
+											<span class="stock-card__price-to clr-82 fnt-12">
+												80 ₽
+											</span>
 										</div>
 										<div class="stock-card__title stck-js-title">
-											<span class="fnt-14 clr-82 "><a href="#">Шоколадный батончик Bounty Trio 24 шт по 82.5 г</a></span>
+											<span class="fnt-14 clr-82 "><a href="#">Напиток сильногазированный Coca-Cola сlassic стекло 0.33 л</a></span>
 										</div>								
 									</div>
 									<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">В корзину</a></button>
 								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-3 col-6">
 								<div class="stock-card brd-gray">
 									<img class="stock-card__image" src="images/image 1.png">
 									<div class="stock-card__middle-info">
-										<div class="stock-card__price">
+										<div class="stock-card__between-price">
 											<span class="stock-card__price-value fnt-24">160 ₽</span>
-											<span class="stock-card__price-old-value clr-82"><strike>182 ₽</strike></span>
+											<span class="stock-card__price-to clr-82 fnt-12">
+												80 ₽
+											</span>
 										</div>
 										<div class="stock-card__title stck-js-title">
-											<span class="fnt-14 clr-82 "><a href="#">Картофель мытый для варки 3 кг</a></span>
-										</div>								
-									</div>
-									<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">В корзину</a></button>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="stock-card brd-gray">
-									<img class="stock-card__image" src="images/image 1.png">
-									<div class="stock-card__middle-info">
-										<div class="stock-card__price">
-											<span class="stock-card__price-value fnt-24">160 ₽</span>
-											<span class="stock-card__price-old-value clr-82"><strike>182 ₽</strike></span>
-										</div>
-										<div class="stock-card__title stck-js-title">
-											<span class="fnt-14 clr-82 "><a href="#">Яблоки ред 1,5 кг</a></span>
-										</div>								
-									</div>
-									<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">В корзину</a></button>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="stock-card brd-gray">
-									<img class="stock-card__image" src="images/image 1.png">
-									<div class="stock-card__middle-info">
-										<div class="stock-card__price">
-											<span class="stock-card__price-value fnt-24">160 ₽</span>
-											<span class="stock-card__price-old-value clr-82"><strike>182 ₽</strike></span>
-										</div>
-										<div class="stock-card__title stck-js-title">
-											<span class="fnt-14 clr-82 "><a href="#">Яблоки ред 1,5 кг</a></span>
+											<span class="fnt-14 clr-82 "><a href="#">Напиток сильногазированный Coca-Cola сlassic стекло 0.33 л</a></span>
 										</div>								
 									</div>
 									<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">В корзину</a></button>

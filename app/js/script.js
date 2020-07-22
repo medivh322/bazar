@@ -13,14 +13,42 @@ $(document).ready(function() {
 		}
 		]
 	});
-	// $(".detail-slider__list").slick({
-	// 	slidesToShow: 3,
-	// 	slidesToScroll: 1,
-	// 	vertical: true,
-	// 	adaptiveHeight: true,
-	// 	dots: false,
-	// 	arrows: true,
-	// });
+	$(".detail-slider__list").slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.detial-slider__main',
+		vertical: true,
+		dots: false,
+		arrows: true,
+		focusOnSelect: true,
+		infinite: true,
+		prevArrow: '<img src="images/done_footer.png" style="width: 9px; height: 5px; top: -17px; right: 50%; transform: translate(50%, 0px); cursor: pointer" alt="">',
+		nextArrow: '<img src="images/up_footer.png" style="width: 9px; height: 5px; bottom: -17px; right: 50%; transform: translate(50%, 0px); cursor: pointer" alt="">',
+		responsive: [
+			{
+				breakpoint: 576,
+				settings: 'unslick'
+			}
+		]
+	});
+	if ($(window).width() < 576) {
+		$(".detial-slider__main").slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: true,
+			infinite: true,
+			arrows: false,
+		});
+	} else {
+		$(".detial-slider__main").slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			vertical: true,
+			adaptiveHeight: true,
+			dots: false,
+			arrows: false,
+		});
+	}
 
 	let max_height_jsTitle;
 	$(".stck-js-title").each(function(index, element){

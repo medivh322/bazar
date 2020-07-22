@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="app/css/style.css">
+	<link rel="stylesheet" href="include/bootstrap/bootstrap-grid.css">
+	<link rel="stylesheet" href="include/slick/slick.css">
+	<script src="include/jquery/jquery-3.5.1.min.js"></script>
+	<script src="include/slick/slick.min.js"></script>
+	<script src="app/js/script.js"></script>
+</head>
+<body>
+	<article class="article">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="article__title clr-black">Оформление заказа</h1>
+				</div>
+				<div class="col-md-7">
+					<h2 class="fnt-24">Детали заказа</h2>
+					<form action="" class="oformlenie-form">
+						<div class="oformlenie-form__name-fam">
+							<div class="input-label-over d-flex flex-column">
+								<label class="fnt-14" for="oformlenie_name">Имя <span class="clr-red">*</span></label>
+								<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_name">
+							</div>
+							<div class="input-label-over d-flex flex-column">
+								<label class="fnt-14" for="oformlenie_family">Фамилия <span class="clr-red">*</span></label>
+								<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_family">
+							</div>
+						</div>
+						<div class="input-label-over d-flex flex-column">
+							<label class="fnt-14" for="oformlenie_name-company">Название компании</label>
+							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_name-company" placeholder="Я ищу...">
+						</div>
+						<div class="input-label-over d-flex flex-column">
+							<label class="fnt-14" for="oformlenie_country-region">Страна / Регион <span class="clr-red">*</span></label>
+							<select name="" id="oformlenie_country-region">
+								<option value="">Россия</option>
+								<option value=""></option>
+							</select>
+						</div>
+						<div class="input-label-over d-flex flex-column">
+							<label class="fnt-14" for="oformlenie_adres">Адрес</label>
+							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_adres" placeholder="Номер дома и название улицы">
+						</div>
+						<input class="padding-16-all brd-gray-simple mr-top-20px" type="text" placeholder="Квартира, апартаменты, жилье">
+						<div class="input-label-over d-flex flex-column">
+							<label class="fnt-14" for="oformlenie_nas-punct">Населенный пункт</label>
+							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_nas-punct">
+						</div>
+						<div class="input-label-over d-flex flex-column">
+							<label class="fnt-14" for="oformlenie_index">Почтовый индекс</label>
+							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_index">
+						</div>
+						<div class="input-label-over d-flex flex-column">
+							<label class="fnt-14" for="oformlenie_telefon">Телефон <span class="clr-red">*</span></label>
+							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_telefon">
+						</div>
+						<div class="input-label-over d-flex flex-column">
+							<label class="fnt-14" for="oformlenie_email">Email <span class="clr-red">*</span></label>
+							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_email">
+						</div>
+						<div class="input-label-over d-flex flex-column">
+							<label class="fnt-14" for="oformlenie_date">Желаемая дата доставки</label>
+							<input class="padding-16-all brd-gray-simple" id="oformlenie_date" type="date" placeholder="15.07.2020">
+						</div>
+						<input class="padding-16-all brd-gray-simple" type="checkbox" id="oformlenie_checkbox">
+						<label class="fnt-18" for="oformlenie_checkbox">Зарегистрировать вас?</label>
+						<div class="input-label-over d-flex flex-column">
+							<label class="fnt-14" for="oformlenie_comment">Примечание к заказу</label>
+							<textarea id="oformlenie_comment brd-gray-simple"  name="" id="" cols="30" rows="10"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-5">
+					
+				</div>
+			</div>
+		</div>
+	</article>
+</body>
+</html>

@@ -204,23 +204,79 @@
 	grid-column-gap: 16px;
 	grid-template-rows: 1fr;
 	grid-template-areas: 'a b';
+	.slick-list{
+		width: 100%;
+		.slick-track{
+			width: 100%;
+		}
+	}
 	.detail-slider__list{
 		grid-area: a;
-		height: 148px;
-		max-height: 148px;
-		background-color: red;
-		align-self: center;
-		.slick-list{
-			height: 100%;
-			.slick-track{
-				height: 100%;
-			}
-		}
 	}
 	.detial-slider__main{
 		grid-area: b;
 		height: 300px;
-		background-color: red;
+		width: 100%;
+		img{
+			width: 300px;
+			height: 300px;
+		}
+	}
+	@include for-mobile{
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas: 'a';
+		.detial-slider__main{
+			grid-area: a;
+		}
+	}
+}
+
+.detial-slider__main{
+	@include for-mobile{
+		display: none !important;
+		margin: 0 0 44px 0;
+		.slick-dots{
+			margin: 8px 0 0 0;
+			display: flex;
+			justify-content: center;
+			li{
+				button{
+					margin: 0 4px;
+					width: 12px;
+					height: 14px;	
+					border-radius: 50%;
+					border: 1px solid #2F993A; 	
+					background-color: white;
+					&:focus{
+						outline: 0;
+					}		
+				}
+			}
+			.slick-active{
+				button{
+					background: #2F993A;
+				}
+			}
+		}
+	}
+}
+
+.detail-slider__list{
+	align-self: center;
+	height: auto;
+	.slick-list{
+		height: 100%;
+		.slick-track{
+			height: 100%;
+		}
+	}
+	img[data-slick-index]{
+		height: 44px;
+		opacity: 0.5;
+		&.slick-current{
+			opacity: 1;
+		}
 	}
 }
 
@@ -255,6 +311,7 @@
 }
 
 .stock-card{
+	word-break: break-word;
 	padding: 16px;
 	@extend %grid;
 	grid-template-columns: 1fr;
@@ -272,6 +329,9 @@
 	.stock-card__add-to-card {
 		grid-area: c;
 	}
+	@include for-mobile{
+		padding: 8px;
+	}
 }
 
 %button-add-to-cart{
@@ -287,6 +347,11 @@
 	&:hover{
 		background: #2F993A;
 		color: #FFFFFF;
+	}
+	&.disabled{
+		border: 2px solid #F2F2F2;
+		background: #F2F2F2;
+		color: #828282;
 	}
 }
 
@@ -408,7 +473,7 @@
 	}
 }
 
- div:not(:first-child) .footer__column{
+div:not(:first-child) .footer__column{
 	margin: 20px 0 0 0;
 }
 
@@ -674,6 +739,9 @@
 
 .buy-detail{
 	padding: 24px;
+	@include for-mobile{
+		margin: 12px 0 0 0;
+	}
 }
 
 .buy-detail__subtotal{
@@ -873,9 +941,9 @@
 }
 
 .order{
-	padding: 24px;
+	padding: 0 24px;
 	@include for-mobile{
-		padding: 12px;
+		padding: 0 12px;
 	}
 }
 
@@ -948,18 +1016,15 @@
 	color: #5C9EF2;
 }
 
-.order__item:not(:first-child):not(:last-child){
+.order__item:not(:first-child){
+	border-top: 1px solid #F2F2F2;
+}
+
+.order__item{
 	padding: 28px 0px;
-	border-top: 1px solid #F2F2F2;
-}
-
-.order__item:first-child{
-	margin: 0 0 28px 0;	
-}
-
-.order__item:last-child{
-	border-top: 1px solid #F2F2F2;
-	padding: 28px 0 0 0;
+	@include for-mobile{
+		padding: 12px 0;
+	}
 }
 
 .order__center-column{
@@ -971,6 +1036,9 @@
 	>*:last-child{
 		margin: 0 0 0 8px;
 	};
+	@include for-mobile{
+		margin: 12px 0 0 0;
+	}
 }
 
 .order__right-column{
@@ -978,13 +1046,28 @@
 	justify-content: flex-end;
 	grid-template-columns: 1fr 84px 120px;
 	grid-template-rows: 42px; 
+	grid-template-areas: "a b c";
+	grid-column-gap: 24px;
+	>*:nth-child(1){
+		grid-area: a;
+	}
+	>*:nth-child(2){
+		grid-area: b;
+	}
+	>*:nth-child(3){
+		grid-area: c;
+	}
 	.stock-card__add-to-card{
 		width: 120px;
+	}
+	@include for-mobile{
+		grid-template-columns: repeat(3, max-content);
+		grid-column-gap: 6px;
+		margin: 12px 0 0 0;
 	}
 }
 
 .order__counter{
-	margin: 0 24px;
 	height: 42px;
 	padding: 12px;
 	.order__counter-input{
@@ -1098,5 +1181,53 @@
 		margin: 0 0 12px 0;
 		width: 100px;
 		height: 100px;
+	}
+}
+
+.oformlenie-form{
+	select{
+		height: 50px;
+		border: 1px solid #E0E0E0;
+		padding: 16px;
+		margin: 4px 0 0 0;
+	}
+	input[type="text"]{
+		width: 100%;
+		height: 50px;
+	}
+	input[type="checkbox"]{
+		margin: 20px 9px 0 0;
+	}
+	label{
+		margin: 20px 0 0 0
+	}
+	textarea{
+		margin: 4px 0 0 0;
+		resize: none;
+	}
+}
+
+.oformlenie-form__name-fam{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 30px;
+	grid-template-areas: 'a b';
+	>*:nth-child(1){
+		grid-area: a;
+	}
+	>*:nth-child(2){
+		grid-area: b;
+	}
+	@include for-mobile{
+		grid-template-columns: 1fr;
+		grid-template-areas: 'a' 'b';
+	}
+}
+
+.input-label-over{
+	input{
+		height: 50px;
+		margin: 4px 0 0 0;
 	}
 }

@@ -195,6 +195,11 @@ table             {border-collapse: collapse;border-spacing: 0;}
 	>*:nth-child(n+5){
 		margin: 20px 0 0 0;
 	}	
+	@include for-mobile{
+		>*:not(:first-child){
+			margin: 20px 0 0 0;
+		}
+	}
 }
 
 .mr-item-3n{
@@ -218,6 +223,13 @@ table             {border-collapse: collapse;border-spacing: 0;}
 
 .mr-top-16px{
 	margin: 16px 0 0 0;
+}
+
+.mr-top-20px{
+	margin: 20px 0 0 0;
+	@include for-mobile{
+		margin: 16px 0 0 0;
+	}
 }
 
 .mr-16px{

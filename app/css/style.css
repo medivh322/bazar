@@ -167,6 +167,10 @@ table {
 .mr-item-4n > *:nth-child(n+5) {
   margin: 20px 0 0 0; }
 
+@media screen and (max-width: 576px) {
+  .mr-item-4n > *:not(:first-child) {
+    margin: 20px 0 0 0; } }
+
 .mr-item-3n > *:nth-child(n+4) {
   margin: 24px 0 0 0; }
 
@@ -182,6 +186,12 @@ table {
 
 .mr-top-16px {
   margin: 16px 0 0 0; }
+
+.mr-top-20px {
+  margin: 20px 0 0 0; }
+  @media screen and (max-width: 576px) {
+    .mr-top-20px {
+      margin: 16px 0 0 0; } }
 
 .mr-16px {
   margin: 16px 0; }
