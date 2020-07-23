@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	$ = jQuery;
 	$(".main-slider").slick({
 		infinite: true,
 		dots: true,
@@ -136,20 +137,4 @@ $(document).ready(function() {
 			$(this).siblings(".sidebar-left").hide();
 		}
 	});
-
-	// наведение на "каталог товаров"
-	$("#mouseoverCatalog").hover(function(){
-		console.log("+");
-	});
-
-
-	// $("#mouseoverCatalog").mouseenter(function(){
-	// 	$(".catalog-mouseover").css("visibility","visible");
-	// 	$(this).addClass("active");
-	// 	console.log($(this).height());
-	// });
-	// $("#mouseoverCatalog").mouseleave(function(){
-	// 	$(".catalog-mouseover").css("visibility","hidden");
-	// 	$(this).removeClass("active");
-	// });
 });
