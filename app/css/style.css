@@ -181,6 +181,12 @@ table {
 .mr-bottom-4px {
   margin: 0 0 4px 0; }
 
+.mr-top-4px {
+  margin: 4px 0 0 0; }
+
+.mr-top-8px {
+  margin: 8px 0 0 0; }
+
 .mr-top-36px {
   margin: 36px 0 0 0; }
 
@@ -205,6 +211,9 @@ table {
 .mr-bottom-36px {
   margin: 0 0 36px 0; }
 
+.mr-none {
+  margin: 0 !important; }
+
 .padding-36px {
   padding: 36px 0; }
 
@@ -225,6 +234,12 @@ table {
 
 .mr-top-24px {
   margin: 24px 0 0 0; }
+
+.mr-padding-24-all {
+  padding: 24px; }
+
+.mr-bottom-24px {
+  margin: 0 0 24px 0; }
 
 .mr-bt-24px {
   margin: 24px 0 24px 0; }
@@ -253,3 +268,13 @@ table {
 @media screen and (max-width: 576px) {
   .mobile-mr-12px {
     margin: 12px 0 0 0; } }
+
+@media screen and (max-width: 576px) {
+  .open_content {
+    background: url("../../images/up_footer.png");
+    background-repeat: no-repeat;
+    background-position: right; }
+    .open_content.active {
+      background: url("../../images/done_footer.png");
+      background-repeat: no-repeat;
+      background-position: right; } }

@@ -25,30 +25,30 @@ $(document).ready(function() {
 		prevArrow: '<img src="images/done_footer.png" style="width: 9px; height: 5px; top: -17px; right: 50%; transform: translate(50%, 0px); cursor: pointer" alt="">',
 		nextArrow: '<img src="images/up_footer.png" style="width: 9px; height: 5px; bottom: -17px; right: 50%; transform: translate(50%, 0px); cursor: pointer" alt="">',
 		responsive: [
-			{
-				breakpoint: 576,
-				settings: 'unslick'
-			}
+		{
+			breakpoint: 576,
+			settings: 'unslick'
+		}
 		]
 	});
-	if ($(window).width() < 576) {
-		$(".detial-slider__main").slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			dots: true,
-			infinite: true,
-			arrows: false,
-		});
-	} else {
-		$(".detial-slider__main").slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			vertical: true,
-			adaptiveHeight: true,
-			dots: false,
-			arrows: false,
-		});
-	}
+	$(".detial-slider__main").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		vertical: true,
+		adaptiveHeight: true,
+		dots: false,
+		arrows: false,
+		responsive: [
+		{
+			breakpoint: 576,
+			settings: {
+				vertical: false,
+				dots: true,
+				infinite: true, 	
+			}
+		}
+		]
+	});
 
 	let max_height_jsTitle;
 	$(".stck-js-title").each(function(index, element){
@@ -65,46 +65,9 @@ $(document).ready(function() {
 		$(element).height(max_height_jsTitle);
 	});
 
-	let firstMouseOver = false;
-	$("#mouseoverCatalog").mouseenter(function(fn){
-		$(".catalog-mouseover").css("visibility","visible");
-		firstMouseOver = true;
-	});
-	$("#mouseoverCatalog").mouseleave(function(fn){
-		if (!secondMouseOver){
-			$(".catalog-mouseover").css("visibility","hidden");
-		}
-	});
-
-	$(".catalog-mouseover").mouseleave(function(fn){
-		$(this).css("visibility","hidden");
-	});
-
-	let openId;
-	$('[data-1-level-id]').mouseenter(function(){
-		let id = $(this).attr('data-1-level-id');
-		if ($('[data-2-level-id='+id+']').length) {
-			openId = id;
-			$('[data-2-level-id='+id+']').css('display','block');
-			$('[data-2-level-id='+id+']').siblings().css('display','none');
-		} else {
-			$('[data-2-level-id='+openId+']').css('display','none');
-			$('[data-3-level-id='+openId+']').css('display','none');
-		}
-	});
-	$('[data-2-level-id]').mouseenter(function(){
-		let id = $(this).attr('data-2-level-id');
-		if ($('[data-3-level-id='+id+']').length) {
-			$('[data-3-level-id='+id+']').css('display','block');
-			$('[data-3-level-id='+id+']').siblings().css('display','none');
-		} else {
-			$('[data-3-level-id='+openId+']').css('display','none');
-		}
-	});
-
 	// замена текста //
 	function text(first, second, third){
-		$(".article__top-menu").children().eq(0).text(first);
+		$(".article__top-menu").children().eq(0).children("span").text(first);
 		$(".article__top-menu").children().eq(1).text(second);
 		$(".article__top-menu").children().eq(2).text(third); 
 	}
@@ -116,6 +79,12 @@ $(document).ready(function() {
 			text("Каталог товаров","Каталог торговых точек","Каталог продавцов");
 		}
 	});
+
+	if ($(window).width() < 576){
+		text("Товары","Торговые точки","Продавцы")
+	} else {
+		text("Каталог товаров","Каталог торговых точек","Каталог продавцов");
+	}
 
 	// раскрытие в футере
 	$(".footer__title").click(function(e){
@@ -135,4 +104,52 @@ $(document).ready(function() {
 			});
 		}
 	})
+
+	// 
+	let raiting = $('.selles-card__raiting-value').val();
+	$('.selles-card__raiting-value').siblings('.selles-card__raiting').children().each(function(i,e){
+		if (i < raiting) {
+			e.remove();
+		} else {
+			return false;
+		}
+	});
+
+	// открытие бургера
+	$("#burder_header").click(function(){
+		$(this).toggleClass("active");		
+		if ($(this).hasClass("active")) {  
+			$(".mobile_content_burger").removeClass("d-none");
+			$(".mobile_content_burger").addClass("d-flex");
+		} else {
+			$(".mobile_content_burger").removeClass("d-flex");
+			$(".mobile-content-burger").addClass("d-none");
+		}
+	});
+
+	// универсальное раскрытие
+	$(".open_content").on("click", function(){
+		$(this).toggleClass("active");
+		if ($(this).hasClass("active")) {
+			$(this).siblings(".sidebar-left").show();
+		} else {
+			$(this).siblings(".sidebar-left").hide();
+		}
+	});
+
+	// наведение на "каталог товаров"
+	$("#mouseoverCatalog").hover(function(){
+		console.log("+");
+	});
+
+
+	// $("#mouseoverCatalog").mouseenter(function(){
+	// 	$(".catalog-mouseover").css("visibility","visible");
+	// 	$(this).addClass("active");
+	// 	console.log($(this).height());
+	// });
+	// $("#mouseoverCatalog").mouseleave(function(){
+	// 	$(".catalog-mouseover").css("visibility","hidden");
+	// 	$(this).removeClass("active");
+	// });
 });

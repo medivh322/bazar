@@ -17,17 +17,17 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1 class="article__title clr-black">Оформление заказа</h1>
+					<h2 class="fnt-24 mr-bottom-24px">Детали заказа</h2>
 				</div>
 				<div class="col-md-7">
-					<h2 class="fnt-24">Детали заказа</h2>
 					<form action="" class="oformlenie-form">
 						<div class="oformlenie-form__name-fam">
 							<div class="input-label-over d-flex flex-column">
-								<label class="fnt-14" for="oformlenie_name">Имя <span class="clr-red">*</span></label>
+								<label class="fnt-14 mr-none" for="oformlenie_name">Имя <span class="clr-red">*</span></label>
 								<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_name">
 							</div>
 							<div class="input-label-over d-flex flex-column">
-								<label class="fnt-14" for="oformlenie_family">Фамилия <span class="clr-red">*</span></label>
+								<label class="fnt-14 mr-none" for="oformlenie_family">Фамилия <span class="clr-red">*</span></label>
 								<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_family">
 							</div>
 						</div>
@@ -73,13 +73,45 @@
 							<label class="fnt-14" for="oformlenie_comment">Примечание к заказу</label>
 							<textarea id="oformlenie_comment brd-gray-simple"  name="" id="" cols="30" rows="10"></textarea>
 						</div>
-					</form>
+					</div>
 				</div>
 				<div class="col-md-5">
-					
+					<div class="brd-gray-simple mr-padding-24-all">
+						<span class="mr-bottom-16px">Ваш заказ</span>
+						<div class="d-flex justify-content-between padding-bottom-16px brd-bottom">
+							<ul class="fnt-14 clr-4f">
+								<li class="mr-top-16px">Картофель мытый для варки 3 кг<span>x3</span></li>
+								<li class="mr-top-16px">Яблоки ред 1,5 кг<span>x2</span></li>
+								<li class="mr-top-16px">Шоколад Молочный Kinder Chocolate 100 г</li>
+								<li class="mr-top-16px">Шпинат свежий 50 г лоток лето россия<span>x2</span></li>
+							</ul>
+							<ul class="fnt-14">
+								<li class="mr-top-16px">54,00 ₽</li>
+								<li class="mr-top-16px">154,00 ₽</li>
+								<li class="mr-top-16px">97,00 ₽</li>
+								<li class="mr-top-16px">154,00 ₽</li>
+							</ul>
+						</div>
+						<p class="mr-top-16px">Вариант оплаты</p>
+						<div>
+							<div>
+								<input type="radio" id="oformlenie-radio1" value="" name="zhid">
+								<label for="oformlenie-radio1">Онлайн оплата</label>
+							</div>
+							<div>
+								<input type="radio" id="oformlenie-radio2" value="" name="zhid">
+								<label for="oformlenie-radio2">Оплата наличными курьеру</label>
+							</div>
+							<div>
+								<input type="radio" id="oformlenie-radio3" value="" name="zhid">
+								<label for="oformlenie-radio3">Оплата курьеру картой</label>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
+			</form>
 		</div>
-	</article>
+	</div>
+</article>
 </body>
 </html>
