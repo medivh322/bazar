@@ -104,7 +104,6 @@
 
 #mouseoverCatalog:hover{
 	.catalog-mouse-body{
-		height: 100%;
 		visibility: visible;
 	}
 } 
@@ -113,8 +112,10 @@
 	position: absolute;
 	top: 100%;
 	left: 0;
+	height: 100%;
 	cursor: pointer;
 	visibility: hidden;
+	z-index: 5
 }
 
 .catalog-mouseover{	
@@ -126,9 +127,9 @@
 	z-index: 3;
 	/*top: calc(100% + 15px);*/
 	@extend %grid;
-	grid-template-columns: repeat(3, auto);
+	grid-template-columns: 300px 244px;
 	grid-template-rows: 1fr;
-	grid-template-areas: 'a b c';
+	grid-template-areas: 'a b';
 	padding: 25px;
 	.catalog-mouseenter__first-level{
 		grid-area: a;
@@ -136,13 +137,7 @@
 	.catalog-mouseenter__second-level{
 		grid-area: b;
 		ul{
-			display: none;
-		}
-	}
-	.catalog-mouseenter__third-level{
-		grid-area: c;
-		ul{
-			display: none;
+			/*display: none;*/
 		}
 	}
 }
@@ -429,6 +424,7 @@
 }
 
 .selles-card{
+	background: gray;
 	padding: 16px;
 	height: 420px;
 	border-radius: 12px;	

@@ -108,18 +108,13 @@
 #mouseoverCatalog:hover .catalog-mouse-body {
   visibility: visible; }
 
-#mouseoverCatalog:hover:after {
-  position: absolute;
-  right: 15px;
-  content: url(../../images/done_footer.png); }
-
 .catalog-mouse-body {
   position: absolute;
   top: 100%;
   left: 0;
   height: 100%;
   cursor: pointer;
-  /*visibility: hidden;*/
+  visibility: hidden;
   z-index: 5; }
 
 .catalog-mouseover {
