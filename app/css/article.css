@@ -1147,7 +1147,7 @@ div:not(:first-child) .footer__column {
     border: 0px;
     background-color: white; }
 
-.auth-reg input[type="text"] {
+.auth-reg input {
   height: 50px;
   margin: 4px 0 0 0; }
 
@@ -1158,8 +1158,15 @@ div:not(:first-child) .footer__column {
   -webkit-text-decoration-line: underline;
   text-decoration-line: underline; }
 
+.auth-reg .woocommerce-privacy-policy-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+  margin: 16px 0px; }
+
 .auth__checkbox {
-  margin: 0 10px 0 26px; }
+  margin: 0 10px 0 26px !important; }
 
 .auth__submit {
   width: auto;
