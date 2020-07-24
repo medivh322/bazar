@@ -69,8 +69,8 @@ $(document).ready(function() {
 	// замена текста //
 	function text(first, second, third){
 		$(".article__top-menu").children().eq(0).children("span").text(first);
-		$(".article__top-menu").children().eq(1).text(second);
-		$(".article__top-menu").children().eq(2).text(third); 
+		$(".article__top-menu").children().eq(1).children("a").text(second);
+		$(".article__top-menu").children().eq(2).children("a").text(third); 
 	}
 
 	$(window).resize(function(){
@@ -136,5 +136,44 @@ $(document).ready(function() {
 		} else {
 			$(this).siblings(".sidebar-left").hide();
 		}
+	});
+
+	// открытие каталога в мобилке по нажатию клавиш
+	$("#mouseoverCatalog").click(function(){
+		$(".catalog-mouse-body").toggle("fast");
+	});
+
+	// открытие каталога второго уровня
+	$("[data-one-level]").click(function(){
+		let elem = $(this);
+		let id = $(this).attr("data-one-level");
+		$("[data-two-level="+id+"]").toggle("fast",function(){
+			if ($(this).css("display") == 'block') {
+				elem.addClass("active");
+			} else {
+				elem.removeClass("active");
+			}
+		});
+	});
+
+	$("[data-one-level]").hover(function(){
+		let id = $(this).attr("data-one-level");
+		$(".catalog-mouseover__list[data-two-level-d="+id+"]").css("display","block");
+		$(".catalog-mouseover__list[data-two-level-d="+id+"]").siblings(".catalog-mouseover__list").css("display","none");
+	});
+
+	$("#mouseoverCatalog").mouseleave(function(){
+		$("[data-two-level-d]").each(function(i,elem){
+			$(elem).css("display","none");
+		});
+	});
+
+	// collapse
+	$("[data-target]").click(function(){
+		let id = $(this).attr("data-target");
+		$(this).addClass("active");
+		$(this).siblings().removeClass("active");
+		$("#"+id+"[data-toggle='collapse']").addClass("active");
+		$("#"+id+"[data-toggle='collapse']").siblings().removeClass("active");
 	});
 });

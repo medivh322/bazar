@@ -75,20 +75,20 @@
 }
 
 .header__nav-ul{
-	display: grid;
+	/*display: grid;
 	grid-template-columns: repeat(3, max-content);
 	grid-template-rows: 1fr;	
 	grid-template-areas: 'a b c';
-	grid-column-gap: 24px;
-	li:nth-child(1){
+	grid-column-gap: 24px;*/
+	/*li:nth-child(1){
 		grid-area: a;
-	}
+	}*/
 	li:nth-child(2){
-		grid-area: b;	
+		margin: 0 24px;	
 	}
-	li:nth-child(3){
+	/*li:nth-child(3){
 		grid-area: c;
-	}
+	}*/
 	li{
 		display: flex;
 		justify-content: center;

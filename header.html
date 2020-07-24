@@ -10,6 +10,7 @@
 	<script src="include/jquery/jquery-3.5.1.min.js"></script>
 	<script src="include/slick/slick.min.js"></script>
 	<script src="app/js/script.js"></script>
+	<script src="app/js/dynamic_adapt-master/script2.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -93,84 +94,93 @@
 		<div class="header__bottom-panel">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-9">
+					<div class="col-md-9 header_top_class">
 						<ul class="article__top-menu">
-							<li class="clr-back-green d-flex justify-content-center align-items-center clr-white fnt-18" id="mouseoverCatalog"><a href="">Каталог товаров</a>
-								<div class="catalog-mouse-body">
+							<li class="clr-back-green d-flex justify-content-center align-items-center clr-white fnt-18" id="mouseoverCatalog"><span>Каталог товаров</span>
+								<div class="catalog-mouse-body" data-da="header_top_class">
 									<div class="catalog-mouseover fnt-15 clr-black">
 										<div class="catalog-mouseenter__first-level clr-black fnt-15">
 											<ul class="catalog-mouseover__list">
-												<li>
-													<a href="" class="catalog-mouse-body__li">Выпечка и хлеб</a>
+												<li class="catalog-mouse-body__li d-flex align-items-center" data-one-level="1">
+													<img src="images/bread-2 1.png" alt="">	
+													<a href="#">Макароны</a>
 												</li>
-												<li><a href="" class="catalog-mouse-body__li">Мясо</a></li>
-												<li><a href="" class="catalog-mouse-body__li">Птица/яйцо</a></li>
-												<li><a href="" class="catalog-mouse-body__li">Мясная гастрономия</a></li>
-												<li><a href="" class="catalog-mouse-body__li"></a></li>
+												<ul class="catalog-mouseover__list catalog-two-level d-md-none" data-two-level="1">
+													<li class="d-flex align-items-center">
+														<a href="#">Макароны</a>
+													</li>
+													<li class="d-flex align-items-center">
+														<a href="#">Автомагистр</a>
+													</li>
+													<li class="d-flex align-items-center">
+														<a href="#">Макароны</a>
+													</li>
+												</ul>
+												<li class="catalog-mouse-body__li d-flex align-items-center" data-one-level="2">
+													<img src="images/bread-2 1.png" alt="">	
+													<a href="#">Макароны</a>
+												</li>
+												<ul class="catalog-mouseover__list catalog-two-level d-md-none" data-two-level="2">
+													<li class="d-flex align-items-center">
+														<a href="#">Макароны</a>
+													</li>
+													<li class="d-flex align-items-center">
+														<a href="#">Автомагистр</a>
+													</li>
+													<li class="d-flex align-items-center">
+														<a href="#">Макароны</a>
+													</li>
+												</ul>
+												<li class="catalog-mouse-body__li d-flex align-items-center" data-one-level="3">
+													<img src="images/bread-2 1.png" alt="">	
+													<a href="#">Макароны</a>
+												</li>
+												<ul class="catalog-mouseover__list catalog-two-level d-md-none" data-two-level="3">
+													<li class="d-flex align-items-center">
+														<a href="#">Макароны</a>
+													</li>
+													<li class="d-flex align-items-center">
+														<a href="#">Автомагистр</a>
+													</li>
+													<li class="d-flex align-items-center">
+														<a href="#">Макароны</a>
+													</li>
+												</ul>
 											</ul>
 										</div>
-										<div class="catalog-mouseenter__second-level">
-											<ul class="catalog-mouseover__list" data-2-level-id="1">
-												<li><a href="#">1</a></li>
-												<li><a href="#">Бытовая техника</a></li>
-												<li><a href="#">Детские товары</a></li>
-												<li><a href="#">Зоотовары</a></li>
-												<li><a href="#">Продукты питания</a></li>
-												<li><a href="#">Красота и уход</a></li>
-												<li><a href="#">Автотовары</a></li>
-												<li><a href="#">Товары для дома</a></li>
+										<div class="catalog-mouseenter__second-level d-none d-md-block">
+											<ul class="catalog-mouseover__list" data-two-level-d="1">
+												<li class="d-flex align-items-center">
+													<a href="#">1</a>
+												</li>
+												<li class="d-flex align-items-center">
+													<a href="#">Автомагистр</a>
+												</li>
+												<li class="d-flex align-items-center">
+													<a href="#">Макароны</a>
+												</li>
 											</ul>
-											<ul class="catalog-mouseover__list" data-2-level-id="2">
-												<li><a href="#">2</a></li>
-												<li><a href="#">Бытовая техника</a></li>
-												<li><a href="#">Детские товары</a></li>
-												<li><a href="#">Зоотовары</a></li>
-												<li><a href="#">Продукты питания</a></li>
-												<li><a href="#">Красота и уход</a></li>
-												<li><a href="#">Автотовары</a></li>
-												<li><a href="#">Товары для дома</a></li>
+											<ul class="catalog-mouseover__list" data-two-level-d="2">
+												<li class="d-flex align-items-center">
+													<a href="#">2</a>
+												</li>
+												<li class="d-flex align-items-center">
+													<a href="#">Автомагистр</a>
+												</li>
+												<li class="d-flex align-items-center">
+													<a href="#">Макароны</a>
+												</li>
 											</ul>
-											<ul class="catalog-mouseover__list" data-2-level-id="3">
-												<li><a href="#">3</a></li>
-												<li><a href="#">Бытовая техника</a></li>
-												<li><a href="#">Детские товары</a></li>
-												<li><a href="#">Зоотовары</a></li>
-												<li><a href="#">Продукты питания</a></li>
-												<li><a href="#">Красота и уход</a></li>
-												<li><a href="#">Автотовары</a></li>
-												<li><a href="#">Товары для дома</a></li>
-											</ul>
-										</div>
-										<div class="catalog-mouseenter__third-level">
-											<ul class="catalog-mouseover__list" data-3-level-id="1">
-												<li><a href="#">1</a></li>
-												<li><a href="#">Бытовая техника</a></li>
-												<li><a href="#">Детские товары</a></li>
-												<li><a href="#">Зоотовары</a></li>
-												<li><a href="#">Продукты питания</a></li>
-												<li><a href="#">Красота и уход</a></li>
-												<li><a href="#">Автотовары</a></li>
-												<li><a href="#">Товары для дома</a></li>
-											</ul>
-											<ul class="catalog-mouseover__list" data-3-level-id="3">
-												<li><a href="#">1</a></li>
-												<li><a href="#">Бытовая техника</a></li>
-												<li><a href="#">Детские товары</a></li>
-												<li><a href="#">Зоотовары</a></li>
-												<li><a href="#">Продукты питания</a></li>
-												<li><a href="#">Красота и уход</a></li>
-												<li><a href="#">Автотовары</a></li>
-												<li><a href="#">Товары для дома</a></li>
-											</ul>
-											<ul class="catalog-mouseover__list" data-3-level-id="3">
-												<li><a href="#">1</a></li>
-												<li><a href="#">Бытовая техника</a></li>
-												<li><a href="#">Детские товары</a></li>
-												<li><a href="#">Зоотовары</a></li>
-												<li><a href="#">Продукты питания</a></li>
-												<li><a href="#">Красота и уход</a></li>
-												<li><a href="#">Автотовары</a></li>
-												<li><a href="#">Товары для дома</a></li>
+											<ul class="catalog-mouseover__list" data-two-level-d="3">
+												<li class="d-flex align-items-center">
+													<a href="#">3</a>
+												</li>
+												<li class="d-flex align-items-center">
+													<a href="#">Автомагистр</a>
+												</li>
+												<li class="d-flex align-items-center">
+													<a href="#">Макароны</a>
+												</li>
 											</ul>
 										</div>
 									</div>
@@ -178,7 +188,7 @@
 							</li>
 							<li class="clr-back-gray d-flex justify-content-center align-items-center fnt-18"><a href="#">Каталог торговых точек</a></li>
 							<li class="clr-back-gray d-flex justify-content-center align-items-center fnt-18"><a href="#">Каталог продавцов</a></li>
-						</ul>						
+						</ul>					
 					</div>
 					<div class="col-md-3">
 						<form action="#">
