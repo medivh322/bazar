@@ -278,3 +278,10 @@ table {
       background: url("../../images/done_footer.png");
       background-repeat: no-repeat;
       background-position: right; } }
+
+.success-message {
+  background: #E6F2E7;
+  border-radius: 8px; }
+
+.nowrap {
+  white-space: nowrap; }

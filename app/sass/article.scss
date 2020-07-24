@@ -1266,12 +1266,22 @@ div:not(:first-child) .footer__column{
 		padding: 16px;
 		margin: 4px 0 0 0;
 	}
-	input[type="text"]{
-		width: 100%;
+	input{
+		border: 1px solid #E0E0E0;
+		border-radius: 5px;
 		height: 50px;
+		width: 100%;
+		padding: 16px;
 	}
 	input[type="checkbox"]{
 		margin: 20px 9px 0 0;
+		height: 20px;
+		width: 20px;
+	}
+	input[type="radio"]{
+		width: 22px;
+		height: 22px;
+		margin: 0px;
 	}
 	label{
 		margin: 20px 0 0 0
@@ -1280,6 +1290,31 @@ div:not(:first-child) .footer__column{
 		margin: 4px 0 0 0;
 		resize: none;
 	}
+}
+
+
+
+.oformlenie-form__right-column{
+	border: 1px solid #F2F2F2;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	padding: 24px;
+	@include for-mobile{
+		margin: 16px 0 0 0;
+		box-shadow: none;
+		padding: 0px;
+		border: 0px;
+	}
+}
+
+.oformlenie-form__radio-div{
+	label{
+		margin: 2px 0 0 9px;
+	}
+}
+
+.oformlenie-itog{
+	width: 100%;
 }
 
 .oformlenie-form__name-fam{
@@ -1297,6 +1332,9 @@ div:not(:first-child) .footer__column{
 	@include for-mobile{
 		grid-template-columns: 1fr;
 		grid-template-areas: 'a' 'b';
+		>*:nth-child(2){
+			margin: 10px 0 0 0;
+		}
 	}
 }
 
@@ -1305,6 +1343,10 @@ div:not(:first-child) .footer__column{
 		height: 50px;
 		margin: 4px 0 0 0;
 	}
+}
+
+.input-label-over{
+
 }
 
 .mobile_content_burger{

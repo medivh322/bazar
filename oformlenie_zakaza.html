@@ -14,26 +14,26 @@
 <body>
 	<article class="article">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h1 class="article__title clr-black">Оформление заказа</h1>
-					<h2 class="fnt-24 mr-bottom-24px">Детали заказа</h2>
-				</div>
-				<div class="col-md-7">
-					<form action="" class="oformlenie-form">
+			<form action="" class="oformlenie-form">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="article__title clr-black">Оформление заказа</h1>
+						<h2 class="fnt-24 mr-bottom-24px">Детали заказа</h2>
+					</div>
+					<div class="col-md-7">
 						<div class="oformlenie-form__name-fam">
 							<div class="input-label-over d-flex flex-column">
 								<label class="fnt-14 mr-none" for="oformlenie_name">Имя <span class="clr-red">*</span></label>
-								<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_name">
+								<input  type="text" id="oformlenie_name">
 							</div>
 							<div class="input-label-over d-flex flex-column">
 								<label class="fnt-14 mr-none" for="oformlenie_family">Фамилия <span class="clr-red">*</span></label>
-								<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_family">
+								<input type="text" id="oformlenie_family">
 							</div>
 						</div>
 						<div class="input-label-over d-flex flex-column">
 							<label class="fnt-14" for="oformlenie_name-company">Название компании</label>
-							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_name-company" placeholder="Я ищу...">
+							<input  type="text" id="oformlenie_name-company" placeholder="Я ищу...">
 						</div>
 						<div class="input-label-over d-flex flex-column">
 							<label class="fnt-14" for="oformlenie_country-region">Страна / Регион <span class="clr-red">*</span></label>
@@ -42,70 +42,97 @@
 								<option value=""></option>
 							</select>
 						</div>
-						<div class="input-label-over d-flex flex-column">
+						<div class="input-label-over d-flex flex-column mr-bottom-16px">
 							<label class="fnt-14" for="oformlenie_adres">Адрес</label>
-							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_adres" placeholder="Номер дома и название улицы">
+							<input type="text" id="oformlenie_adres" placeholder="Номер дома и название улицы">
 						</div>
-						<input class="padding-16-all brd-gray-simple mr-top-20px" type="text" placeholder="Квартира, апартаменты, жилье">
+						<input type="text" placeholder="Квартира, апартаменты, жилье">
 						<div class="input-label-over d-flex flex-column">
 							<label class="fnt-14" for="oformlenie_nas-punct">Населенный пункт</label>
-							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_nas-punct">
+							<input  type="text" id="oformlenie_nas-punct">
 						</div>
 						<div class="input-label-over d-flex flex-column">
 							<label class="fnt-14" for="oformlenie_index">Почтовый индекс</label>
-							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_index">
+							<input  type="text" id="oformlenie_index">
 						</div>
 						<div class="input-label-over d-flex flex-column">
 							<label class="fnt-14" for="oformlenie_telefon">Телефон <span class="clr-red">*</span></label>
-							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_telefon">
+							<input  type="text" id="oformlenie_telefon">
 						</div>
 						<div class="input-label-over d-flex flex-column">
 							<label class="fnt-14" for="oformlenie_email">Email <span class="clr-red">*</span></label>
-							<input class="padding-16-all brd-gray-simple" type="text" id="oformlenie_email">
+							<input  type="text" id="oformlenie_email">
 						</div>
 						<div class="input-label-over d-flex flex-column">
 							<label class="fnt-14" for="oformlenie_date">Желаемая дата доставки</label>
-							<input class="padding-16-all brd-gray-simple" id="oformlenie_date" type="date" placeholder="15.07.2020">
+							<input  id="oformlenie_date" type="date" placeholder="15.07.2020">
 						</div>
-						<input class="padding-16-all brd-gray-simple" type="checkbox" id="oformlenie_checkbox">
-						<label class="fnt-18" for="oformlenie_checkbox">Зарегистрировать вас?</label>
-						<div class="input-label-over d-flex flex-column">
+						<div class="d-flex align-items-center">
+							<input type="checkbox" id="oformlenie_checkbox">
+							<label class="fnt-18" for="oformlenie_checkbox">Зарегистрировать вас?</label>
+						</div>
+						<div class="input-label-over d-flex flex-column mr-top-36px">
 							<label class="fnt-14" for="oformlenie_comment">Примечание к заказу</label>
-							<textarea id="oformlenie_comment brd-gray-simple"  name="" id="" cols="30" rows="10"></textarea>
+							<textarea id="oformlenie_comment  "  name="" id="" cols="30" rows="10"></textarea>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-5">
-					<div class="brd-gray-simple mr-padding-24-all">
-						<span class="mr-bottom-16px">Ваш заказ</span>
-						<div class="d-flex justify-content-between padding-bottom-16px brd-bottom">
-							<ul class="fnt-14 clr-4f">
-								<li class="mr-top-16px">Картофель мытый для варки 3 кг<span>x3</span></li>
-								<li class="mr-top-16px">Яблоки ред 1,5 кг<span>x2</span></li>
-								<li class="mr-top-16px">Шоколад Молочный Kinder Chocolate 100 г</li>
-								<li class="mr-top-16px">Шпинат свежий 50 г лоток лето россия<span>x2</span></li>
+					<div class="col-md-5">
+						<div class="oformlenie-form__right-column">
+							<span class="mr-bottom-16px fnt-18">Ваш заказ</span>
+							<ul class="oformlenie-itog fnt-14">
+								<li class="d-flex justify-content-between mr-top-16px">
+									<span class="clr-4f">Картофель мытый для варки 3 к</span>
+									<span class="clr-black">54,00 ₽</span>
+								</li>
+								<li class="d-flex justify-content-between mr-top-16px">
+									<span class="clr-4f">Картофель мытый для варки 3 к</span>
+									<span class="clr-black">54,00 ₽</span>
+								</li>
+								<li class="d-flex justify-content-between mr-top-16px">
+									<span class="clr-4f">Картофель мытый для варки 3 к</span>
+									<span class="clr-black">54,00 ₽</span>
+								</li>
+								<li class="d-flex justify-content-between mr-top-16px">
+									<span class="clr-4f">Картофель мытый для варки 3 к</span>
+									<span class="clr-black">54,00 ₽</span>
+								</li>
+								<li class="d-flex justify-content-between mr-top-16px">
+									<span class="clr-4f">Картофель мытый для варки 3 к</span>
+									<span class="clr-black">54,00 ₽</span>
+								</li>
 							</ul>
-							<ul class="fnt-14">
-								<li class="mr-top-16px">54,00 ₽</li>
-								<li class="mr-top-16px">154,00 ₽</li>
-								<li class="mr-top-16px">97,00 ₽</li>
-								<li class="mr-top-16px">154,00 ₽</li>
-							</ul>
-						</div>
-						<p class="mr-top-16px">Вариант оплаты</p>
-						<div>
-							<div>
-								<input type="radio" id="oformlenie-radio1" value="" name="zhid">
-								<label for="oformlenie-radio1">Онлайн оплата</label>
+							<div class="padding-bottom-16px brd-bottom mr-top-16px d-flex justify-content-between fnt-18 clr-black">
+								<span>Итог</span>
+								<span>154 рубий</span>
 							</div>
-							<div>
-								<input type="radio" id="oformlenie-radio2" value="" name="zhid">
-								<label for="oformlenie-radio2">Оплата наличными курьеру</label>
+							<p class="mr-top-16px fnt-18">Вариант оплаты</p>
+							<div class="fnt-15 oformlenie-form__radio-div padding-bottom-16px brd-bottom">
+								<div class="mr-top-20px d-flex align-items-center">
+									<input type="radio" id="oformlenie-radio1" value="" name="zhid">
+									<label for="oformlenie-radio1">Онлайн оплата</label>
+								</div>
+								<div class="mr-top-20px d-flex align-items-center">
+									<input type="radio" id="oformlenie-radio2" value="" name="zhid">
+									<label for="oformlenie-radio2">Оплата наличными курьеру</label>
+								</div>
+								<div class="mr-top-20px d-flex align-items-center">
+									<input type="radio" id="oformlenie-radio3" value="" name="zhid">
+									<label for="oformlenie-radio3">Оплата курьеру картой</label>
+								</div>
 							</div>
-							<div>
-								<input type="radio" id="oformlenie-radio3" value="" name="zhid">
-								<label for="oformlenie-radio3">Оплата курьеру картой</label>
+							<p class="mr-top-16px fnt-18">Вариант доставки</p>
+							<div class="fnt-15 oformlenie-form__radio-div padding-bottom-16px">
+								<div class="mr-top-20px d-flex align-items-center">
+									<input type="radio" id="" value="" name="da">
+									<label for="">Самовывоз</label>
+								</div>
+								<div class="mr-top-20px d-flex align-items-center">
+									<input type="radio" id="" value="" name="da">
+									<label for="">Доставка</label>
+								</div>
 							</div>
+							<button class="stock-card__add-to-card-green clr-white fnt-18 mr-top-16px">Подтвердить заказ</button>
+							<p class="fnt-12 clr-82 mr-top-16px">Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей <a style="text-decoration: underline;" href="#" class="clr-green">политика конфиденциальности.</a></p>
 						</div>
 					</div>
 				</div>
