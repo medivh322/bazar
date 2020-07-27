@@ -200,6 +200,9 @@ table {
 .mr-top-8px {
   margin: 8px 0 0 0; }
 
+.mr-bottom-8px {
+  margin: 0 0 8px 0; }
+
 .mr-top-36px {
   margin: 36px 0 0 0; }
 
@@ -226,6 +229,9 @@ table {
 
 .mr-none {
   margin: 0 !important; }
+
+.padding-none {
+  padding: 0 !important; }
 
 .padding-36px {
   padding: 36px 0; }

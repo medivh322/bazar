@@ -240,6 +240,9 @@ table             {border-collapse: collapse;border-spacing: 0;}
 	margin: 8px 0 0 0;
 }
 
+.mr-bottom-8px{
+	margin: 0 0 8px 0;	
+}
 
 .mr-top-36px{
 	margin: 36px 0 0 0;
@@ -274,6 +277,10 @@ table             {border-collapse: collapse;border-spacing: 0;}
 
 .mr-none{
 	margin: 0 !important;
+}
+
+.padding-none{
+	padding: 0 !important;
 }
 
 .padding-36px{

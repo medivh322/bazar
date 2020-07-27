@@ -19,26 +19,29 @@
 					<h1 class="article__title_def">Консоль</h1>
 				</div>
 				<div class="col-md-3">
-					<ul class="fnt-18 sidebar-left">
-						<li class="sidebar-left__item active d-flex align-items-center" data-target="showConsole">
-							<img src="images/profile/dashboard.png" alt="">Консоль
-						</li>
-						<li class="sidebar-left__item d-flex align-items-center" data-target="showZakazi">
-							<img src="images/profile/shopping-bag.png" alt="">Заказы
-						</li>
-						<li class="sidebar-left__item d-flex align-items-center" data-target="showIzbrannoe">
-							<img src="images/profile/heart.png" alt="">Избранное
-						</li>
-						<li class="sidebar-left__item d-flex align-items-center" data-target="showAddress">
-							<img src="images/profile/Pin.png" alt="">Адреса
-						</li>
-						<li class="sidebar-left__item d-flex align-items-center" data-target="showProfile">
-							<img src="images/profile/User 24px.png" alt="">Профиль
-						</li>
-						<li class="sidebar-left__item d-flex align-items-center">
-							<img src="images/profile/log-out.png" alt=""><a href="">Выйти</a>
-						</li>
-					</ul>
+					<div class="mr-bottom-24px brd-bottom padding-bottom-16px">
+						<span class="open_content d-block d-md-none fnt-18">Категории</span>
+						<ul class="fnt-18 sidebar-left profile_sidebar">
+							<li class="sidebar-left__item active d-flex align-items-center" data-target="showConsole">
+								<img src="images/profile/dashboard.png" alt="">Консоль
+							</li>
+							<li class="sidebar-left__item d-flex align-items-center" data-target="showZakazi">
+								<img src="images/profile/shopping-bag.png" alt="">Заказы
+							</li>
+							<li class="sidebar-left__item d-flex align-items-center" data-target="showIzbrannoe">
+								<img src="images/profile/heart.png" alt="">Избранное
+							</li>
+							<li class="sidebar-left__item d-flex align-items-center" data-target="showAddress">
+								<img src="images/profile/Pin.png" alt="">Адреса
+							</li>
+							<li class="sidebar-left__item d-flex align-items-center" data-target="showProfile">
+								<img src="images/profile/User 24px.png" alt="">Профиль
+							</li>
+							<li class="sidebar-left__item d-flex align-items-center">
+								<img src="images/profile/log-out.png" alt=""><a href="">Выйти</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<div class="col-md-9">
 					<div class="toggle_items">
@@ -47,8 +50,8 @@
 							<p class="mr-bt-24px">Из главной страницы аккаунта вы можете посмотреть ваши <a href="#" class="unl-green">недавние заказы</a>, настроить <a href="#" class="unl-green">платежный адрес и адрес доставки</a>, а также <a href="#" class="unl-green">изменить пароль и основную информацию</a></p>
 							<p>Не <b>Ильяс Садыков</b>? <a href="#" class="unl-green">Выйти</a></p>	
 						</div>
-						<div class="toggle_items__item" data-toggle="collapse" id="showZakazi">
-							<div class="cart-line d-none d-md-block">
+						<div class="toggle_items__item active" data-toggle="collapse" id="showZakazi">
+							<div class="cart-line">
 								<div class="title-column-orders fnt-12 clr-82">
 									<span>Заказ</span>
 									<span>Suborders</span>
@@ -58,20 +61,38 @@
 									<span>Действия</span>
 								</div>
 								<div class="order brd-gray mr-top-8px">
-									<div class="order__item profile-orders bread-word">
-										<span class="unl-green fnt-14">№100</span>
-										<div class="d-flex flex-column">
-											<span class="unl-green fnt-14">#101</span>
-											<span class="fnt-12 clr-82">Продавец</span>
+									<div class="order__item profile-orders">
+										<div class="order__item-1">
+											<p class="d-block d-sm-none mr-bottom-8px clr-82 fnt-12">Заказ</p>
+											<span class="unl-green fnt-14">№100</span>
 										</div>
-										<span class="fnt-14">16.07.2020</span>
-										<span class="fnt-14">Обработка</span>
-										<div class="d-flex flex-column">
-											<span class="fnt-14">520,00₽</span>
-											<span class="fnt-12 clr-82">за 2 единицы</span>
+										<div class="order__item-2">
+											<div class="d-flex flex-column">
+												<p class="d-block d-sm-none mr-bottom-8px clr-82 fnt-12">Suborders</p>
+												<span class="unl-green fnt-14">#101</span>
+												<span class="fnt-12 clr-82">Продавец</span>
+											</div>
 										</div>
-										<div class="profile-orders__act">
-											<span class="fnt-14 clr-4f">Просмотр</span>
+										<div class="order__item-3">
+											<p class="d-block d-sm-none mr-bottom-8px clr-82 fnt-12">Дата</p>
+											<span class="fnt-14">16.07.2020</span>
+										</div>
+										<div class="order__item-4">
+											<p class="d-block d-sm-none mr-bottom-8px clr-82 fnt-12">Статус</p>
+											<span class="fnt-14">Обработка</span>
+										</div>
+										<div class="order__item-5">
+											<div class="d-flex flex-column">
+												<p class="d-block d-sm-none mr-bottom-8px clr-82 fnt-12">Итого</p>
+												<span class="fnt-14">520,00₽</span>
+												<span class="fnt-12 clr-82">за 2 единицы</span>
+											</div>
+										</div>
+										<div class="order__item-6">
+											<p class="d-block d-sm-none mr-bottom-8px clr-82 fnt-12">Действия</p>
+											<div class="profile-orders__act">
+												<span class="fnt-14 clr-4f">Просмотр</span>
+											</div>
 										</div>
 									</div>
 									<div class="order__item profile-orders bread-word">
@@ -99,9 +120,9 @@
 						<div class="toggle_items__item" data-toggle="collapse" id="showAddress">
 
 						</div>
-						<div class="toggle_items__item active" data-toggle="collapse" id="showProfile">
+						<div class="toggle_items__item" data-toggle="collapse" id="showProfile">
 							<form action="">	
-								<div class="col-md-8">
+								<div class="col-md-8 padding-none">
 									<div class="oformlenie-form__name-fam">
 										<div class="input-label-over d-flex flex-column">
 											<label class="fnt-14 mr-none" for="oformlenie_name">Имя <span class="clr-red">*</span></label>
@@ -135,7 +156,7 @@
 									</div>
 								</div>
 								<div class="col-12"></div>
-								<div class="col-md-4">
+								<div class="col-8 col-md-4 padding-none">
 									<input type="submit" class="stock-card__add-to-card-green fnt-18 clr-white mr-top-36px" value="Сохранить изменения">
 								</div>
 							</form>
@@ -145,5 +166,6 @@
 			</div>
 		</div>
 	</article>
+	<script src="app/js/dynamic_adapt-master/script2.js"></script>
 </body>
 </html>
