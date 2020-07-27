@@ -17,8 +17,8 @@
 			<form action="" class="oformlenie-form">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 class="article__title clr-black">Оформление заказа</h1>
-						<h2 class="fnt-24 mr-bottom-24px">Детали заказа</h2>
+						<h1 class="article__title_def clr-black">Оформление заказа</h1>
+						<h2 class="fnt-24 mr-bottom-24px d-none d-md-block">Детали заказа</h2>
 					</div>
 					<div class="col-md-7">
 						<div class="oformlenie-form__name-fam">
@@ -48,7 +48,7 @@
 						</div>
 						<input type="text" placeholder="Квартира, апартаменты, жилье">
 						<div class="input-label-over d-flex flex-column">
-							<label class="fnt-14" for="oformlenie_nas-punct">Населенный пункт</label>
+							<label class="fnt-14" for="oformlenie_nas-punct">Населенный пункт <span class="clr-red">*</span></label>
 							<input  type="text" id="oformlenie_nas-punct">
 						</div>
 						<div class="input-label-over d-flex flex-column">
@@ -65,15 +65,15 @@
 						</div>
 						<div class="input-label-over d-flex flex-column">
 							<label class="fnt-14" for="oformlenie_date">Желаемая дата доставки</label>
-							<input  id="oformlenie_date" type="date" placeholder="15.07.2020">
+							<input  id="oformlenie_date" type="date" value="2001-09-11">
 						</div>
-						<div class="d-flex align-items-center">
+						<div class="d-flex align-items-center oformlenie-form__checkbox">
 							<input type="checkbox" id="oformlenie_checkbox">
 							<label class="fnt-18" for="oformlenie_checkbox">Зарегистрировать вас?</label>
 						</div>
 						<div class="input-label-over d-flex flex-column mr-top-36px">
 							<label class="fnt-14" for="oformlenie_comment">Примечание к заказу</label>
-							<textarea id="oformlenie_comment  "  name="" id="" cols="30" rows="10"></textarea>
+							<textarea id="oformlenie_comment"  name="" id="" cols="30" rows="10"></textarea>
 						</div>
 					</div>
 					<div class="col-md-5">
@@ -107,28 +107,28 @@
 							</div>
 							<p class="mr-top-16px fnt-18">Вариант оплаты</p>
 							<div class="fnt-15 oformlenie-form__radio-div padding-bottom-16px brd-bottom">
-								<div class="mr-top-20px d-flex align-items-center">
+								<div class="mr-top-20px d-flex align-items-center oformlenie-form__radio">
 									<input type="radio" id="oformlenie-radio1" value="" name="zhid">
 									<label for="oformlenie-radio1">Онлайн оплата</label>
 								</div>
-								<div class="mr-top-20px d-flex align-items-center">
+								<div class="mr-top-20px d-flex align-items-center oformlenie-form__radio">
 									<input type="radio" id="oformlenie-radio2" value="" name="zhid">
 									<label for="oformlenie-radio2">Оплата наличными курьеру</label>
 								</div>
-								<div class="mr-top-20px d-flex align-items-center">
+								<div class="mr-top-20px d-flex align-items-center oformlenie-form__radio">
 									<input type="radio" id="oformlenie-radio3" value="" name="zhid">
 									<label for="oformlenie-radio3">Оплата курьеру картой</label>
 								</div>
 							</div>
 							<p class="mr-top-16px fnt-18">Вариант доставки</p>
 							<div class="fnt-15 oformlenie-form__radio-div padding-bottom-16px">
-								<div class="mr-top-20px d-flex align-items-center">
-									<input type="radio" id="" value="" name="da">
-									<label for="">Самовывоз</label>
+								<div class="mr-top-20px d-flex align-items-center oformlenie-form__radio">
+									<input type="radio" id="oformlenie-radio4" value="" name="damma">
+									<label for="oformlenie-radio4">Самовывоз</label>
 								</div>
-								<div class="mr-top-20px d-flex align-items-center">
-									<input type="radio" id="" value="" name="da">
-									<label for="">Доставка</label>
+								<div class="mr-top-20px d-flex align-items-center oformlenie-form__radio">
+									<input type="radio" id="oformlenie-radio5" value="" name="damma">
+									<label for="oformlenie-radio5">Доставка</label>
 								</div>
 							</div>
 							<button class="stock-card__add-to-card-green clr-white fnt-18 mr-top-16px">Подтвердить заказ</button>

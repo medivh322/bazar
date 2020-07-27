@@ -143,8 +143,18 @@ table {
   font-size: 18px;
   line-height: 22px; }
 
+.fnt-18-bold {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px; }
+
 .fnt-24 {
   font-weight: 600;
+  font-size: 24px;
+  line-height: 29px; }
+
+.fnt-24-nr {
+  font-weight: normal;
   font-size: 24px;
   line-height: 29px; }
 
@@ -180,6 +190,9 @@ table {
 
 .mr-bottom-4px {
   margin: 0 0 4px 0; }
+
+.mr-right-4px {
+  margin: 0 4px 0 0; }
 
 .mr-top-4px {
   margin: 4px 0 0 0; }
@@ -285,3 +298,12 @@ table {
 
 .nowrap {
   white-space: nowrap; }
+
+.bread-word {
+  white-space: break-word; }
+
+.unl-green {
+  text-decoration: underline;
+  color: #2F993A; }
+  .unl-green > * {
+    word-break: break-word; }

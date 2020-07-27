@@ -667,6 +667,16 @@ div:not(:first-child) .footer__column{
 		background: rgba(48, 153, 57, 0.12);
 		border-radius: 5px;
 	}
+	img{
+		margin: 0 12px 0 0;
+	}
+}
+
+.toggle_items__item{
+	display: none;
+	&.active{
+		display: block;
+	}
 }
 
 .sidebar-left-title{
@@ -981,6 +991,10 @@ div:not(:first-child) .footer__column{
 	}
 }
 
+.cart-line__over-order{
+
+}
+
 .cart-coupon-form{
 	>*{
 		height: 48px;
@@ -1035,7 +1049,7 @@ div:not(:first-child) .footer__column{
 	width: 48px;
 	height: 48px;
 	margin: 0 16px 0 0;
-	object-fit: cover;
+	object-fit: fill;
 }
 
 .order__right-column-basket{
@@ -1167,7 +1181,7 @@ div:not(:first-child) .footer__column{
 }
 
 .auth-reg{
-	input[type="text"]{
+	input{
 		height: 50px;
 		margin: 4px 0 0 0;
 	}
@@ -1177,10 +1191,17 @@ div:not(:first-child) .footer__column{
 	a{
 		text-decoration-line: underline;
 	}
+	.woocommerce-privacy-policy-text{
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 17px;
+		color: #828282;
+		margin: 16px 0px;
+	}
 }
 
 .auth__checkbox{
-	margin: 0 10px 0 26px;
+	margin: 0 10px 0 26px !important;
 }
 
 .auth__submit{
@@ -1273,11 +1294,12 @@ div:not(:first-child) .footer__column{
 		width: 100%;
 		padding: 16px;
 	}
-	input[type="checkbox"]{
+	/*input[type="checkbox"]{
 		margin: 20px 9px 0 0;
 		height: 20px;
 		width: 20px;
-	}
+		display: none;
+	}*/
 	input[type="radio"]{
 		width: 22px;
 		height: 22px;
@@ -1289,6 +1311,59 @@ div:not(:first-child) .footer__column{
 	textarea{
 		margin: 4px 0 0 0;
 		resize: none;
+		border: 1px solid #E0E0E0;
+		border-radius: 5px;
+	}
+}
+
+.oformlenie-form__checkbox{
+	input[type="checkbox"]{
+		display: none;
+		&:checked + label:after{
+			content: "✓";
+			color: white;
+			border-radius: 5px;
+			border: 2px solid #2F993A;
+			height:21px;
+			width:16px;
+			font-size: 14px;
+			background: #2F993A;
+		}
+	}
+	label{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	label:after{
+		content:'';
+		margin: 0 8px 0 0;
+		border-radius: 5px;
+		border: 1px solid #E0E0E0;
+		height: 21px;
+		width: 16px;
+	}
+}
+
+.oformlenie-form__radio{
+	input[type="radio"]{
+		display: none;
+		&+label{
+			display: inline-flex;
+		    align-items: center;
+		    user-select: none;
+		}
+		&+label:before{
+			content: "";
+			background: url("../../images/icon_radio_noactive.svg");
+			width: 22px;
+			height: 22px;
+			margin: 0 8px 0 0;
+		}
+		&:checked+label:before{
+			width: 22px;
+			height: 22px;
+			content: url("../../images/icon_radio_active.svg");
+		}
 	}
 }
 
@@ -1309,12 +1384,21 @@ div:not(:first-child) .footer__column{
 
 .oformlenie-form__radio-div{
 	label{
-		margin: 2px 0 0 9px;
+		margin: 2px 0 0 0;
 	}
 }
 
 .oformlenie-itog{
 	width: 100%;
+	li{
+		>*:nth-child(1){
+			max-width: 70%;
+		}
+		>*:nth-child(2){
+			max-width: 30%;
+			text-align: end;
+		}
+	}
 }
 
 .oformlenie-form__name-fam{
@@ -1342,11 +1426,9 @@ div:not(:first-child) .footer__column{
 	input{
 		height: 50px;
 		margin: 4px 0 0 0;
+		border: 1px solid #E0E0E0;
+		border-radius: 5px;
 	}
-}
-
-.input-label-over{
-
 }
 
 .mobile_content_burger{
@@ -1394,4 +1476,125 @@ div:not(:first-child) .footer__column{
 	font-family: star;
 	color: #F2994A;
 	letter-spacing: 2px;
+}
+
+.title-column-orders{
+	padding: 0 24px;
+	display: grid;
+	grid-template-columns: 71px 95px 115px 169px 200px 1fr;
+	grid-template-rows: 1fr;
+	justify-items: start;
+	grid-template-areas: 'a b c d e f'; 	
+	>*:nth-child(1){
+		grid-area: a;
+	}
+	>*:nth-child(2){
+		grid-area: b;	
+	}
+	>*:nth-child(3){
+		grid-area: c;
+	}
+	>*:nth-child(4){
+		grid-area: d;
+	}
+	>*:nth-child(5){
+		grid-area: e;
+	}
+	>*:nth-child(6){
+		grid-area: f;
+	}
+}
+
+.profile-orders{
+	display: grid;
+	grid-template-columns: 71px 95px 115px 169px 200px 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 'a b c d e f'; 	
+	>*:nth-child(1){
+		grid-area: a;
+	}
+	>*:nth-child(2){
+		grid-area: b;	
+	}
+	>*:nth-child(3){
+		grid-area: c;
+	}
+	>*:nth-child(4){
+		grid-area: d;
+	}
+	>*:nth-child(5){
+		grid-area: e;
+	}
+	>*:nth-child(6){
+		grid-area: f;
+	}
+}
+
+.profile-orders__act{
+	padding: 8px 12px 8px 34px;
+	background-color: #F2F2F2;
+	border-radius: 16px;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	&:after{
+		content: url("../../images/profile/view_12.png");
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		left: 12px;
+	}
+}
+
+.detail-order{
+	.detail-order__item:not(:first-child){
+		padding: 17px 0 0 0;
+		margin: 24px 0 0 0;
+		border-top: 1px solid #F2F2F2;
+	}	
+}
+
+.detail-order__info{
+	>*:nth-child(1){
+		&:after{
+			content: "•";
+			margin: 0 8px;
+			color: #828282;
+		}
+	}
+}
+
+%zakaz-detail-default-grid{
+	display: grid;
+	grid-template-columns: 7fr 2fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 'a b';
+	grid-column-gap: 10px;
+	>*:nth-child(1){
+		grid-area: a;
+	}
+	>*:nth-child(2){
+		grid-area: b;	
+	}
+}
+
+.detail-order__item{
+	@extend %zakaz-detail-default-grid;
+}
+
+.detail-order-itog{
+	padding: 0 24px 24px 24px;
+	.detail-order-itog__item{
+		@extend %zakaz-detail-default-grid;
+		margin: 24px 0 0 0;
+	}
+}
+
+.detail-order-overline{
+	padding: 24px 24px 0 24px;
+	@extend %zakaz-detail-default-grid;
+}
+
+.change-password-profile{
+	margin: 36px 0 16px 0;
 }

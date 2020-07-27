@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="app/css/style.css">
+	<link rel="stylesheet" href="include/bootstrap/bootstrap-grid.css">
+	<link rel="stylesheet" href="include/slick/slick.css">
+	<script src="include/jquery/jquery-3.5.1.min.js"></script>
+	<script src="include/slick/slick.min.js"></script>
+	<script src="app/js/script.js"></script>
+</head>
+<body>
+	<article class="article">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="article__title_def">Консоль</h1>
+				</div>
+				<div class="col-md-3">
+					<ul class="fnt-18 sidebar-left">
+						<li class="sidebar-left__item active d-flex align-items-center" data-target="showConsole">
+							<img src="images/profile/dashboard.png" alt="">Консоль
+						</li>
+						<li class="sidebar-left__item d-flex align-items-center" data-target="showZakazi">
+							<img src="images/profile/shopping-bag.png" alt="">Заказы
+						</li>
+						<li class="sidebar-left__item d-flex align-items-center" data-target="showIzbrannoe">
+							<img src="images/profile/heart.png" alt="">Избранное
+						</li>
+						<li class="sidebar-left__item d-flex align-items-center" data-target="showAddress">
+							<img src="images/profile/Pin.png" alt="">Адреса
+						</li>
+						<li class="sidebar-left__item d-flex align-items-center" data-target="showProfile">
+							<img src="images/profile/User 24px.png" alt="">Профиль
+						</li>
+						<li class="sidebar-left__item d-flex align-items-center">
+							<img src="images/profile/log-out.png" alt=""><a href="">Выйти</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-9">
+					<div class="toggle_items">
+						<div class="toggle_items__item" data-toggle="collapse" id="showConsole">
+							<p class="fnt-24-nr">Добро пожаловать, <b>Ильяс Садыков</b></p>
+							<p class="mr-bt-24px">Из главной страницы аккаунта вы можете посмотреть ваши <a href="#" class="unl-green">недавние заказы</a>, настроить <a href="#" class="unl-green">платежный адрес и адрес доставки</a>, а также <a href="#" class="unl-green">изменить пароль и основную информацию</a></p>
+							<p>Не <b>Ильяс Садыков</b>? <a href="#" class="unl-green">Выйти</a></p>	
+						</div>
+						<div class="toggle_items__item" data-toggle="collapse" id="showZakazi">
+							<div class="cart-line d-none d-md-block">
+								<div class="title-column-orders fnt-12 clr-82">
+									<span>Заказ</span>
+									<span>Suborders</span>
+									<span>Дата</span>
+									<span>Статус</span>
+									<span>Итого</span>
+									<span>Действия</span>
+								</div>
+								<div class="order brd-gray mr-top-8px">
+									<div class="order__item profile-orders bread-word">
+										<span class="unl-green fnt-14">№100</span>
+										<div class="d-flex flex-column">
+											<span class="unl-green fnt-14">#101</span>
+											<span class="fnt-12 clr-82">Продавец</span>
+										</div>
+										<span class="fnt-14">16.07.2020</span>
+										<span class="fnt-14">Обработка</span>
+										<div class="d-flex flex-column">
+											<span class="fnt-14">520,00₽</span>
+											<span class="fnt-12 clr-82">за 2 единицы</span>
+										</div>
+										<div class="profile-orders__act">
+											<span class="fnt-14 clr-4f">Просмотр</span>
+										</div>
+									</div>
+									<div class="order__item profile-orders bread-word">
+										<span class="unl-green fnt-14">№100</span>
+										<div class="d-flex flex-column">
+											<span class="unl-green fnt-14">#101</span>
+											<span class="fnt-12 clr-82">Продавец</span>
+										</div>
+										<span class="fnt-14">16.07.2020</span>
+										<span class="fnt-14">Обработка</span>
+										<div class="d-flex flex-column">
+											<span class="fnt-14">520,00₽</span>
+											<span class="fnt-12 clr-82">за 2 единицы</span>
+										</div>
+										<div class="profile-orders__act">
+											<span class="fnt-14 clr-4f">Просмотр</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="toggle_items__item" data-toggle="collapse" id="showIzbrannoe">
+							<p class="fnt-14 clr-82">Следующие адреса будут использованы при оформлении заказов по-умолчанию.</p>
+						</div>
+						<div class="toggle_items__item" data-toggle="collapse" id="showAddress">
+
+						</div>
+						<div class="toggle_items__item active" data-toggle="collapse" id="showProfile">
+							<form action="">	
+								<div class="col-md-8">
+									<div class="oformlenie-form__name-fam">
+										<div class="input-label-over d-flex flex-column">
+											<label class="fnt-14 mr-none" for="oformlenie_name">Имя <span class="clr-red">*</span></label>
+											<input type="text" id="oformlenie_name">
+										</div>
+										<div class="input-label-over d-flex flex-column">
+											<label class="fnt-14 mr-none" for="oformlenie_family">Фамилия <span class="clr-red">*</span></label>
+											<input type="text" id="oformlenie_family">
+										</div>
+									</div>
+									<div class="input-label-over d-flex flex-column mr-top-16px">
+										<label class="fnt-14 mr-none" for="oformlenie_family">Отображаемое имя <span class="clr-red">*</span></label>
+										<input type="text" id="oformlenie_family">
+										<p class="fnt-14 clr-82">Так ваше имя будет отображаться в разделе учетной записи и при просмотрах</p>
+									</div>
+									<p class="fnt-18-bold change-password-profile">Смена пароля</p>
+									<div class="input-label-over d-flex flex-column mr-top-16px">
+										<label class="fnt-14 mr-none" for="oformlenie_family">Действующий пароль</label>
+										<input type="text" id="oformlenie_family">
+										<p class="fnt-14 clr-82">Не заполняйте, чтобы оставить прежний</p>
+									</div>
+									<div class="input-label-over d-flex flex-column mr-top-16px">
+										<label class="fnt-14 mr-none" for="oformlenie_family">Новый пароль</label>
+										<input type="text" id="oformlenie_family">
+										<p class="fnt-14 clr-82">Не заполняйте, чтобы оставить прежний</p>
+									</div>
+									<div class="input-label-over d-flex flex-column mr-top-16px">
+										<label class="fnt-14 mr-none" for="oformlenie_family">Подтвердите новый пароль</label>
+										<input type="text" id="oformlenie_family">
+										<p class="fnt-14 clr-82">Не заполняйте, чтобы оставить прежний</p>
+									</div>
+								</div>
+								<div class="col-12"></div>
+								<div class="col-md-4">
+									<input type="submit" class="stock-card__add-to-card-green fnt-18 clr-white mr-top-36px" value="Сохранить изменения">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</body>
+</html>

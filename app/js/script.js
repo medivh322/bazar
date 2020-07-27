@@ -176,4 +176,6 @@ $(document).ready(function() {
 		$("#"+id+"[data-toggle='collapse']").addClass("active");
 		$("#"+id+"[data-toggle='collapse']").siblings().removeClass("active");
 	});
+
+	// lines footer
 });
