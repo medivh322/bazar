@@ -177,5 +177,15 @@ $(document).ready(function() {
 		$("#"+id+"[data-toggle='collapse']").siblings().removeClass("active");
 	});
 
+	// 
+	let count_cart = 1;
+	while(true){
+		$(".header__counter-cart").width(count_cart);
+		if ($(".header__counter-cart").width() == $(".header__counter-cart").height()) {
+			break;
+		}
+		count_cart++;
+	}
+
 	// lines footer
 });
