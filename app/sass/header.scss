@@ -4,6 +4,12 @@
 	}
 }
 .header{
+	background-image: url("../../images/header_top.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+	@include for-mobile{
+		background: none;
+	}
 	padding: 9px 0 0 0;
 	@include for-mobile{
 		padding: 9px 0 0 0;

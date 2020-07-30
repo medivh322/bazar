@@ -79,6 +79,8 @@ $(document).ready(function() {
 		} else {
 			text("Каталог товаров","Каталог торговых точек","Каталог продавцов");
 		}
+		let position_lines_footer = $(".footer__phone").offset();
+		$(".footer__lines").offset({top:(position_lines_footer.top-6), left:position_lines_footer.left+100});
 	});
 
 	if ($(window).width() < 576){
@@ -158,11 +160,32 @@ $(document).ready(function() {
 
 	$("[data-one-level]").hover(function(){
 		let id = $(this).attr("data-one-level");
-		$(".catalog-mouseover__list[data-two-level-d="+id+"]").css("display","block");
-		$(".catalog-mouseover__list[data-two-level-d="+id+"]").siblings(".catalog-mouseover__list").css("display","none");
+		if ($(".catalog-mouseover__list").is("[data-two-level-d="+id+"]")){
+			$(".catalog-mouseenter__second-level").css({
+				"padding":"0 0 0 24px",
+				"border-left": "1px solid #F2F2F2",
+				"margin-left": "10px",
+			});
+			$(".catalog-mouseover__list[data-two-level-d="+id+"]").css("display","block");
+			$(".catalog-mouseover__list[data-two-level-d="+id+"]").siblings(".catalog-mouseover__list").css("display","none");
+		} else {
+			$(".catalog-mouseenter__second-level").css({
+				"padding":"0px",
+				"border-left": "0px",
+				"margin-left": "0px",
+			});
+			$(".catalog-mouseover__list[data-two-level-d]").each(function(i,elem){
+				$(this).css("display","none");
+			});
+		}
 	});
 
 	$("#mouseoverCatalog").mouseleave(function(){
+		$(".catalog-mouseenter__second-level").css({
+			"padding":"0px",
+			"border-left": "0px",
+			"margin-left": "0px",
+		});
 		$("[data-two-level-d]").each(function(i,elem){
 			$(elem).css("display","none");
 		});
@@ -177,4 +200,18 @@ $(document).ready(function() {
 		$("#"+id+"[data-toggle='collapse']").siblings().removeClass("active");
 	});
 	// lines footer
+
+	let position_lines_footer = $(".footer__phone").offset();
+	$(".footer__lines").offset({top:(position_lines_footer.top-6), left:position_lines_footer.left+100});
+
+	// вывод рейтинга
+	$(".raiting_output").each(function(i,e){
+		let value = new Number($(this).children(".raiting_output__value").text());
+		let ostatok = value % 1;
+		
+	});
+	value = null;
+
+	// переход на вкладку адрес после нажатия на изменить
+	
 });
