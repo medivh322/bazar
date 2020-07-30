@@ -194,6 +194,8 @@ $(document).ready(function() {
 	// collapse
 	$("[data-target]").click(function(){
 		let id = $(this).attr("data-target");
+		let text = $.trim($(this).text());
+		$('#profile_title').text(text);
 		$(this).addClass("active");
 		$(this).siblings().removeClass("active");
 		$("#"+id+"[data-toggle='collapse']").addClass("active");
@@ -211,7 +213,4 @@ $(document).ready(function() {
 		
 	});
 	value = null;
-
-	// переход на вкладку адрес после нажатия на изменить
-	
 });
