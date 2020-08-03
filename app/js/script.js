@@ -198,6 +198,10 @@ $(document).ready(function() {
 		$('#profile_title').text(text);
 		$(this).addClass("active");
 		$(this).siblings().removeClass("active");
+		// 
+		$("[data-toggle-id="+id+"][data-toggle='collapse']").addClass("active");
+		$("[data-toggle-id="+id+"][data-toggle='collapse']").siblings().removeClass("active");
+		// 
 		$("#"+id+"[data-toggle='collapse']").addClass("active");
 		$("#"+id+"[data-toggle='collapse']").siblings().removeClass("active");
 	});

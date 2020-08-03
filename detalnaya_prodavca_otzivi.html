@@ -46,13 +46,53 @@
 				</div>
 				<div class="col-md-3 mr-top-16px">
 					<ol class="fnt-18 sidebar-left">
-						<li class="sidebar-left__item active" data-target="showGoods">Товары продавца (3)</li>
+						<li class="sidebar-left__item active" data-target="showGoods">Вопросы и ответы</li>
 						<li class="sidebar-left__item" data-target="showReviews">Отзывы (3)</li>
 					</ol>
+					<div class="toggle_items_form">
+						<div class="toggle_items__item" data-toggle="collapse" data-toggle-id="showReviews">
+							<form action="#" method="post" class="write-review toggle_item">
+								<p class="fnt-18 clr-black">Написать отзыв</p>
+								<div class="write-review__item">
+									<p class="fnt-14 clr-black">Ваша оценка</p>
+									<div></div>
+								</div>
+								<div class="write-review__item">
+									<p class="fnt-14 clr-black">Продавец  <span class="clr-red">*</span></p>
+									<select name="" id="" class="write-review__select fnt-15">
+										<option value="">Эмиль</option>
+										<option value="">Алмаз</option>
+										<option value="">Нияз</option>
+									</select>							
+								</div>
+								<div class="write-review__item">
+									<p class="fnt-14 clr-black">Ваш отзыв <span class="clr-red">*</span></p>
+									<textarea name="" id="" cols="30" rows="10" class="write-review__textarea"></textarea>	
+								</div>
+								<p class="fnt-12 sidebar-left__mark clr-82">Ваш адрес email не будет опубликован. 
+									Обязательные поля помечены 
+									<span class="clr-red">*</span>
+								</p>
+							</form>
+						</div>
+						<div class="toggle_items__item active" data-toggle="collapse" data-toggle-id="showGoods">
+							<form action="#" method="post" class="write-review toggle_item">
+								<p class="fnt-18 clr-black">Задать вопрос</p>
+								<div class="write-review__item">
+									<p class="fnt-14 clr-black">Ваш вопрос <span class="clr-red">*</span></p>
+									<textarea name="" id="" cols="30" rows="10" class="write-review__textarea"></textarea>	
+								</div>
+								<p class="fnt-12 sidebar-left__mark clr-82">Ваш адрес email не будет опубликован. 
+									Обязательные поля помечены 
+									<span class="clr-red">*</span>
+								</p>
+							</form>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-9 mr-top-16px">
 					<div class="toggle_items">
-						<div class="toggle_items__item" data-toggle="collapse" id="showReviews">
+						<div class="toggle_items__item" data-toggle="collapse" data-toggle-id="showReviews">
 							<div class="reviews">
 								<div class="reviews__item">
 									<div class="reviews__avatar">
@@ -101,7 +141,7 @@
 								</div>
 							</div>	
 						</div>
-						<div class="toggle_items__item active" data-toggle="collapse" id="showGoods">
+						<div class="toggle_items__item active" data-toggle="collapse" data-toggle-id="showGoods">
 							<div class="stock">
 								<div class="row mr-item-4n">
 									<div class="col-md-12 fnt-14 mr-bottom-16px">
