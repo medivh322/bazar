@@ -609,6 +609,24 @@
   @media screen and (max-width: 576px) {
     .sidebar-left.profile_sidebar {
       display: none; } }
+  .sidebar-left.profile_sidebar .sidebar-left__item:before {
+    margin: 0 13px 0 0;
+    width: 24px;
+    height: 24px; }
+  .sidebar-left.profile_sidebar .sidebar-left__item:nth-child(1):before {
+    content: url("../../images/profile/dashboard.png"); }
+  .sidebar-left.profile_sidebar .sidebar-left__item:nth-child(2):before {
+    content: url("../../images/profile/shopping-bag.png"); }
+  .sidebar-left.profile_sidebar .sidebar-left__item:nth-child(3):before {
+    content: url("../../images/profile/heart.png"); }
+  .sidebar-left.profile_sidebar .sidebar-left__item:nth-child(4):before {
+    content: url("../../images/profile/Pin.png"); }
+  .sidebar-left.profile_sidebar .sidebar-left__item:nth-child(5):before {
+    content: url("../../images/profile/User 24px.png"); }
+  .sidebar-left.profile_sidebar .sidebar-left__item:nth-child(6):hover {
+    color: red; }
+  .sidebar-left.profile_sidebar .sidebar-left__item:nth-child(6):before {
+    content: url("../../images/profile/log-out.png"); }
 
 .sidebar-left__item {
   padding: 12px 16px;
@@ -1318,32 +1336,32 @@
       width: 100px;
       height: 100px; } }
 
-.oformlenie-form select {
-  height: 50px;
-  border: 1px solid #E0E0E0;
-  padding: 16px;
-  margin: 4px 0 0 0; }
-
-.oformlenie-form input {
-  border: 1px solid #E0E0E0;
-  border-radius: 5px;
-  height: 50px;
-  width: 100%;
-  padding: 16px; }
-
-.oformlenie-form input[type="radio"] {
-  width: 22px;
-  height: 22px;
-  margin: 0px; }
-
-.oformlenie-form label {
-  margin: 20px 0 0 0; }
-
-.oformlenie-form textarea {
-  margin: 4px 0 0 0;
-  resize: none;
-  border: 1px solid #E0E0E0;
-  border-radius: 5px; }
+.oformlenie-form {
+  /*input{
+		border: 1px solid #E0E0E0;
+		border-radius: 5px;
+		height: 50px;
+		width: 100%;
+		padding: 16px;
+	}*/ }
+  .oformlenie-form select {
+    height: 50px;
+    border: 1px solid #E0E0E0;
+    padding: 0 0 0 10px;
+    margin: 4px 0 0 0; }
+  .oformlenie-form input[type="radio"] {
+    width: 22px;
+    height: 22px;
+    margin: 0px; }
+  .oformlenie-form label {
+    margin: 20px 0 0 0; }
+  .oformlenie-form textarea {
+    margin: 4px 0 0 0;
+    resize: none;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px; }
+  .oformlenie-form.profile input[type="submit"] {
+    width: 300px; }
 
 .oformlenie-form__checkbox input[type="checkbox"] {
   display: none; }

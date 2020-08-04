@@ -675,6 +675,46 @@ div:not(:first-child) .footer__column{
 	@include for-mobile{
 		display: none;
 	}
+	.sidebar-left__item{
+		&:before{
+			margin: 0 13px 0 0;
+			width: 24px;
+			height: 24px;
+		};
+	}
+	.sidebar-left__item:nth-child(1){
+		&:before{
+			content: url("../../images/profile/dashboard.png");
+		};
+	}
+	.sidebar-left__item:nth-child(2){
+		&:before{
+			content: url("../../images/profile/shopping-bag.png");
+		};
+	}
+	.sidebar-left__item:nth-child(3){
+		&:before{
+			content: url("../../images/profile/heart.png");
+		};
+	}
+	.sidebar-left__item:nth-child(4){
+		&:before{
+			content: url("../../images/profile/Pin.png");
+		};
+	}
+	.sidebar-left__item:nth-child(5){
+		&:before{
+			content: url("../../images/profile/User 24px.png");
+		};
+	}
+	.sidebar-left__item:nth-child(6){
+		&:hover{
+			color: red;
+		}
+		&:before{
+			content: url("../../images/profile/log-out.png");
+		};
+	}
 }
 
 .sidebar-left__item{
@@ -1286,16 +1326,16 @@ div:not(:first-child) .footer__column{
 	select{
 		height: 50px;
 		border: 1px solid #E0E0E0;
-		padding: 16px;
+		padding: 0 0 0 10px;
 		margin: 4px 0 0 0;
 	}
-	input{
+	/*input{
 		border: 1px solid #E0E0E0;
 		border-radius: 5px;
 		height: 50px;
 		width: 100%;
 		padding: 16px;
-	}
+	}*/
 	input[type="radio"]{
 		width: 22px;
 		height: 22px;
@@ -1309,6 +1349,11 @@ div:not(:first-child) .footer__column{
 		resize: none;
 		border: 1px solid #E0E0E0;
 		border-radius: 5px;
+	}
+	&.profile{
+		input[type="submit"]{
+			width: 300px;
+		}
 	}
 }
 
