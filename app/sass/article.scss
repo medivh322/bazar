@@ -279,6 +279,7 @@
 	img{
 		width: 100%;
 		height: 300px !important;
+		object-fit: contain;
 	}
 	@include for-mobile{
 		margin: 0 0 44px 0;
@@ -317,6 +318,7 @@
 	img[data-slick-index]{
 		height: 44px;
 		opacity: 0.5;
+		object-fit: contain;
 		&.slick-current{
 			opacity: 1;
 		}
@@ -441,7 +443,7 @@
 
 .stock-card__image{
 	width: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	height: 160px;
 }
 
@@ -778,13 +780,13 @@ div:not(:first-child) .footer__column{
 	.next{
 		@extend %arrow;
 		&:after{
-			background: url("../../images/chevron-right.png");
+			background: url("../../images/chevron-right-1.png");
 		};
 	}
 	.prev{
 		@extend %arrow;
 		&:after{
-			background: url("../../images/chevron-right-1.png");
+			background: url("../../images/chevron-right.png");
 		}
 	}
 	li{
@@ -996,11 +998,13 @@ div:not(:first-child) .footer__column{
 	grid-template-areas: 'a b'
 	'c c'
 	'd d';
+	align-items: center;
 	>*:nth-child(1){
 		grid-area: a;
 	};
 	>*:nth-child(2){
 		grid-area: b;
+		justify-self: end;
 	};
 	>*:nth-child(3){
 		grid-area: c;
@@ -1008,9 +1012,6 @@ div:not(:first-child) .footer__column{
 	>*:nth-child(4){
 		grid-area: d;
 	};
-	.raiting_output{
-		justify-self: end;
-	}
 }
 
 .reviews__desc{
@@ -1329,13 +1330,6 @@ div:not(:first-child) .footer__column{
 		padding: 0 0 0 10px;
 		margin: 4px 0 0 0;
 	}
-	/*input{
-		border: 1px solid #E0E0E0;
-		border-radius: 5px;
-		height: 50px;
-		width: 100%;
-		padding: 16px;
-	}*/
 	input[type="radio"]{
 		width: 22px;
 		height: 22px;
@@ -1777,4 +1771,9 @@ div:not(:first-child) .footer__column{
 		width: 16px;
 		height: 16px;
 	}
+}
+
+.onsale
+{
+	display: none !important;
 }
