@@ -958,7 +958,22 @@ div:not(:first-child) .footer__column{
 }
 
 .write-review__select{
-	width: 100%l
+	width: 100%;
+	padding: 16px; 
+	max-width: 100%; 
+	box-sizing: border-box; 
+	border: 1px solid #E0E0E0;
+	border-radius: 5px;
+	background-image: url("../../images/up_footer.png"); 
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%; 
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	&:-ms-expand{
+		display: none;
+	}
 }
 
 .reviews__item{
