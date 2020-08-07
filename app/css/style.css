@@ -77,6 +77,9 @@ table {
   .slick-arrow:focus {
     outline: 0; }
 
+.w-100 {
+  width: 100%; }
+
 .clr-back-gray {
   background: rgba(48, 153, 57, 0.12); }
 

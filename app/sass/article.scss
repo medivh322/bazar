@@ -1156,8 +1156,26 @@ div:not(:first-child) .footer__column{
 }
 
 .order__item{
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 'a b c';
+	grid-column-gap: 10px;
 	padding: 28px 0px;
+	>*:nth-child(1){
+		grid-area: a;
+	}
+	>*:nth-child(2){
+		grid-area: b;
+	}
+	>*:nth-child(3){
+		grid-area: c;
+		justify-self: end;
+	}
 	@include for-mobile{
+		grid-template-columns: 1fr;
+		grid-template-areas: 'a' 'b' 'c';
+		grid-template-rows: repeat(3, auto);
 		padding: 12px 0;
 	}
 }
@@ -1179,7 +1197,7 @@ div:not(:first-child) .footer__column{
 .order__right-column{
 	display: grid;
 	justify-content: flex-end;
-	grid-template-columns: 1fr 84px 120px;
+	grid-template-columns: 1fr 84px minmax(120px, 120px);
 	grid-template-rows: 42px; 
 	grid-template-areas: "a b c";
 	grid-column-gap: 24px;
@@ -1193,7 +1211,8 @@ div:not(:first-child) .footer__column{
 		grid-area: c;
 	}
 	.stock-card__add-to-card{
-		width: 120px;
+		min-width: 120px;
+		max-width: 120px;
 	}
 	@include for-mobile{
 		grid-template-columns: repeat(3, max-content);

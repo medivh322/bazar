@@ -96,106 +96,46 @@
 				<div class="col-md-12">
 					<div class="order brd-gray mr-top-16px">
 						<div class="order__item">
-							<div class="row">
-								<div class="col-md-5 d-flex align-items-center">
-									<div class="order__left-column d-flex flex-column">
-										<div class="raiting_output">
-											<span class="raiting_output__value">4.4</span>
-										</div>
-										<span class="fnt-18 clr-black">Магазин Ласточка</span>
-										<span class="fnt-12 clr-82">Колхозный рынок, ул. Московская, 24</span>
+							<div class="d-flex align-items-center">
+								<div class="order__left-column d-flex flex-column">
+									<div class="raiting_output">
+										<span class="raiting_output__value">4.4</span>
 									</div>
-								</div>
-								<div class="col-md-3 d-flex align-items-center">
-									<div class="order__center-column d-flex">
-										<ol class="fnt-12 clr-black">
-											<li>Страна:</li>
-											<li>Город:</li>
-										</ol>
-										<ol class="fnt-12 clr-82">
-											<li>Россия</li>
-											<li>Казань</li>
-										</ol>
-									</div>
-								</div>
-								<div class="col-md-4 d-flex justify-content-md-center align-items-center">
-									<div class="order__right-column d-flex">
-										<span class="d-flex align-items-center fnt-24 clr-black">69 ₽</span>
-										<div class="d-flex order__counter brd-gray align-items-center">
-											<button class="clr-green fnt-18" id="buttonMinus">-</button>
-											<input type="number" value="1" min="1" class="order__counter-input fnt-15">
-											<button class="clr-green fnt-18" id="buttonPlus">+</button>
-										</div>
-										<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">Купить</a></button>
-									</div>
+									<span class="fnt-18 clr-black">Магазин Ласточка</span>
+									<span class="fnt-12 clr-82">Колхозный рынок, ул. Московская, 24</span>
 								</div>
 							</div>
-						</div>
-						<div class="order__item">
-							<div class="row">
-								<div class="col-md-5 d-flex align-items-center">
-									<div class="order__left-column d-flex flex-column">
-										<div></div>
-										<span class="fnt-18 clr-black">Магазин Ласточка</span>
-										<span class="fnt-12 clr-82">Колхозный рынок, ул. Московская, 24</span>
-									</div>
-								</div>
-								<div class="col-md-3 d-flex align-items-center">
-									<div class="order__center-column d-flex">
-										<ol class="fnt-12 clr-black">
-											<li>Страна:</li>
-											<li>Город:</li>
-										</ol>
-										<ol class="fnt-12 clr-82">
-											<li>Россия</li>
-											<li>Казань</li>
-										</ol>
-									</div>
-								</div>
-								<div class="col-md-4 d-flex justify-content-md-center align-items-center">
-									<div class="order__right-column d-flex">
-										<span class="d-flex align-items-center fnt-24 clr-black">69 ₽</span>
-										<div class="d-flex order__counter brd-gray align-items-center">
-											<button class="clr-green fnt-18" id="buttonMinus">-</button>
-											<input type="number" value="1" min="1" class="order__counter-input fnt-15">
-											<button class="clr-green fnt-18" id="buttonPlus">+</button>
-										</div>
-										<button class="stock-card__add-to-card disabled clr-green fnt-15"><a href="#">Купить</a></button>
-									</div>
+							<div class="d-flex align-items-center">
+								<div class="order__center-column d-flex">
+									<ol class="fnt-12 clr-black">
+										<li>Страна:</li>
+										<li>Город:</li>
+									</ol>
+									<ol class="fnt-12 clr-82">
+										<li>Россия</li>
+										<li>Казань</li>
+									</ol>
 								</div>
 							</div>
-						</div>
-						<div class="order__item">
-							<div class="row">
-								<div class="col-md-5 d-flex align-items-center">
-									<div class="order__left-column d-flex flex-column">
-										<div></div>
-										<span class="fnt-18 clr-black">Магазин Ласточка</span>
-										<span class="fnt-12 clr-82">Колхозный рынок, ул. Московская, 24</span>
+							<div class="d-flex justify-content-md-center align-items-center">
+								<div class="order__right-column d-flex">
+									<!-- ДЛЯ ОДИНОЧНОЙ ЦЕНЫ -->
+									<span class="d-flex align-items-center fnt-24 clr-black">69 ₽</span>
+									<!-- ---------- -->
+									<!-- ДЛЯ ДИАПАЗОНА ЦЕН -->
+									<div class="stock-card__between-price d-flex flex-column">
+										<span class="fnt-24"><span class="fnt-12 clr-82">от </span>160 ₽</span>
+										<span class="stock-card__price-to clr-82 fnt-12">
+											80 ₽
+										</span>
 									</div>
-								</div>
-								<div class="col-md-3 d-flex align-items-center">
-									<div class="order__center-column d-flex">
-										<ol class="fnt-12 clr-black">
-											<li>Страна:</li>
-											<li>Город:</li>
-										</ol>
-										<ol class="fnt-12 clr-82">
-											<li>Россия</li>
-											<li>Казань</li>
-										</ol>
+									<!-- ---------- -->
+									<div class="d-flex order__counter brd-gray align-items-center">
+										<button class="clr-green fnt-18" id="buttonMinus">-</button>
+										<input type="number" value="1" min="1" class="order__counter-input fnt-15">
+										<button class="clr-green fnt-18" id="buttonPlus">+</button>
 									</div>
-								</div>
-								<div class="col-md-4 d-flex justify-content-md-center align-items-center">
-									<div class="order__right-column d-flex">
-										<span class="d-flex align-items-center fnt-24 clr-black">69 ₽</span>
-										<div class="d-flex order__counter brd-gray align-items-center">
-											<button class="clr-green fnt-18" id="buttonMinus">-</button>
-											<input type="number" value="1" min="1" class="order__counter-input fnt-15">
-											<button class="clr-green fnt-18" id="buttonPlus">+</button>
-										</div>
-										<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">Купить</a></button>
-									</div>
+									<button class="stock-card__add-to-card clr-green fnt-15"><a href="#">Купить</a></button>
 								</div>
 							</div>
 						</div>
