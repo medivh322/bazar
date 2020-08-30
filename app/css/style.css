@@ -157,3 +157,12 @@ table {
   outline: 0;
   border: 0;
   color: white; }
+
+.success_create_questino_icon {
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  min-height: 120px; }
+
+.success_text {
+  margin: 0 0 0 30px; }
