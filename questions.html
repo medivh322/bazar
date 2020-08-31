@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="include/bootstrap/bootstrap-grid.css">
+    <script src="include/jquery/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="app/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="app/js/script.js"></script>
+</head>
+
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="steps">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="steps__item d-flex">
+                            <div class="ellipse_step active" data-step-ellipse="1">
+                            </div>
+                            <div class="step_desc d-flex flex-column justify-content-sm-between">
+                                <span>Шаг 1</span>
+                                <p>Общие вопросы</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="steps__item d-flex">
+                            <div class="ellipse_step" data-step-ellipse="2">
+                            </div>
+                            <div class="step_desc d-flex flex-column justify-content-sm-between">
+                                <span>Шаг 2</span>
+                                <p>Сотрудники</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="steps__item d-flex">
+                            <div class="ellipse_step" data-step-ellipse="3">
+                            </div>
+                            <div class="step_desc d-flex flex-column justify-content-sm-between">
+                                <span>Шаг 3</span>
+                                <p>Информационные системы</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="main__h2 mr-top-main_h2">Указания по заполнению!</h2>
+            <p class="main__desc-text">Анкета является официальным документом исполнительной власти, содержащем качественные, проверенные данные, позволяющих дать комплексную оценку и присвоить республиканский рейтинг цифровой зрелости. Анкета заполняется руководством организации (глава ведомства; заместитель руководителя, ответственный за цифровизацию; руководитель отдела кадров).<br><br>
+                Отвечайте на вопросы последовательно — от первого к последнему. При ответе на закрытые вопросы необходимо выбрать один вариант ответа. При ответе на вопрос «Да» проставляется цифра «1», при ответе «Нет» — цифра «0». Если ячейка остается пустой, ответ расценивается как «0».
+                Анкета заполняется в электронной форме. Срок для заполнения анкеты составляет 9 рабочих дней с момента получения. Ответственным лицом за заполнение анкеты является заместитель руководителя/руководитель органа исполнительной власти Республики Татарстан.
+                Непосредственное заполнение анкеты может быть поручено сотрудникам не ниже начальника отдела.
+                Заполнение анкеты сотрудником уровня ниже начальника отдела допустимо в случае узкой специфики вопроса и отсутствия в ведомстве профильного отдела (например вопрос информационной безопасности), при этом ответственные лица остаются те же.</p>
+        </div>
+        <form action="" class="main_form toggle_steps">
+            <div class="container">
+                <div class="toggle_steps__item active" data-toggle-step="1">
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">1.</span>
+                                        <span>Количество основного персонала (за исключением обслуживающего персонала)</span>
+                                    </label>
+                                    <p>Указывается общее число сотрудников. Данное число включает всех сотрудников ведомства за исключением обслуживающего персонала, чья работа не направлена напрямую на решение задач ведомства (уборщиков, водителей, охранников и т.д..).</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <input type="text" placeholder="Ввод..." class="main_form__input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">2.</span>
+                                        <span>Количество сотрудников, входящих в команду цифровой трансформации.</span>
+                                    </label>
+                                    <p>Указывается число сотрудников, непосредственно занимающихся задачами цифровой трансформации в министерстве/ведомстве, учитываемых в анкеровании. Данное число включает курирующего вопросы цифровой трансформации Заместителя министра или руководителя высшего звена ведомства, отвечающего за цифровую трансформацию, и всех сотрудников министерства/ ведомства которые выполняют те или иные задачи цифровой трансформации внутри министерства/ведомства, в т.ч. линейных руководителей и исполнителей</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <input type="text" placeholder="Ввод..." class="main_form__input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">3.</span>
+                                        <span>Укажите количество внутриведомственных информационных ресурсов, которые ведутся в бумажном виде.</span>
+                                    </label>
+                                    <p>Указывается общее число сотрудников. Данное число включает всех сотрудников ведомства за исключением обслуживающего персонала, чья работа не направлена напрямую на решение задач ведомства (уборщиков, водителей, охранников и т.д..).</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="main_form__radio-box">
+                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                    <label for="contactChoice1">Email</label>
+                                    <input type="radio" id="contactChoice2" name="contact" value="phone" class="mr-40px-left">
+                                    <label for="contactChoice2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">4.</span>
+                                        <span>Укажите количество архивных внутриведомственных информационных ресурсов, которые велись в бумажном виде.</span>
+                                    </label>
+                                    <p>Указывается общее число сотрудников. Данное число включает всех сотрудников ведомства за исключением обслуживающего персонала, чья работа не направлена напрямую на решение задач ведомства (уборщиков, водителей, охранников и т.д..).</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="main_form__radio-box">
+                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                    <label for="contactChoice1">Email</label>
+                                    <input type="radio" id="contactChoice2" name="contact" value="phone" class="mr-40px-left">
+                                    <label for="contactChoice2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">5.</span>
+                                        <span>В вашем ведомстве ручной ввод данных в ограничивается только впервые появляющимися данными (порождаемыми)?.</span>
+                                    </label>
+                                    <p>Сотрудники ведомства вручную ведут только те госданные, которые впервые появляются в госсекторе и ведомство является их первоисточником. При этом сотрудники не занимаются ручной перепечаткой других ведомственных данных, а получают их посредствам сервисов обмена между информационных систем (без использования почтовых пересылок и мессенджеров).
+                                        Пример: Министерство по делам молодёжи по Р. Татарстан с использованием внутриведомственных информационных ресурсов готовит Республиканскую программу по организации оздоровлению, отдыху и занятости детей и подростков, внося вручную полный перечень планируемых мероприятий. При этом, наименования участвующих в программе государственных организаций вносятся из справочника, а не заносятся вручную. </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="main_form__radio-box">
+                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                    <label for="contactChoice1">Email</label>
+                                    <input type="radio" id="contactChoice2" name="contact" value="phone" class="mr-40px-left">
+                                    <label for="contactChoice2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">6.</span>
+                                        <span>Укажите количество архивных внутриведомственных информационных ресурсов, которые велись в бумажном виде.</span>
+                                    </label>
+                                    <p>Указывается общее число сотрудников. Данное число включает всех сотрудников ведомства за исключением обслуживающего персонала, чья работа не направлена напрямую на решение задач ведомства (уборщиков, водителей, охранников и т.д..).</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="main_form__radio-box">
+                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                    <label for="contactChoice1">Email</label>
+                                    <input type="radio" id="contactChoice2" name="contact" value="phone" class="mr-40px-left">
+                                    <label for="contactChoice2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">7.</span>
+                                        <span>В ведомстве используются данные из Единой системы нормативно-справочной информации (ЕС НСИ)?</span>
+                                    </label>
+                                    <p>Единая система нормативно-справочной информации (ЕСНСИ) – федеральная государственная информационная система, которая предназначена для обеспечения единой точки доступа к справочной информации (НСИ), используемой в государственных и муниципальных информационных системах, где все заинтересованные стороны – участники информационного взаимодействия могут получить:
+                                        - описание справочников/классификаторов, а также базовых государственных информационных ресурсов;
+                                        - актуальные данные справочников и классификаторов.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="main_form__radio-box">
+                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                    <label for="contactChoice1">Email</label>
+                                    <input type="radio" id="contactChoice2" name="contact" value="phone" class="mr-40px-left">
+                                    <label for="contactChoice2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">8.</span>
+                                        <span>В ведомстве используется электронный документооборот?</span>
+                                    </label>
+                                    <p>Наряду с бумажными документами, визы на которых приходится собирать вручную, используется система электронного документооборота. Она позволяет создавать цифровой документ, визировать его и обмениваться с другими пользователями внутри и вне организации.
+                                        Пример: документ визируется в организации в электронном, а не бумажном виде. И министерством и подведомственными учреждениями используется ЕМСЭД для подавляющего числа документов
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="main_form__radio-box">
+                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                    <label for="contactChoice1">Email</label>
+                                    <input type="radio" id="contactChoice2" name="contact" value="phone" class="mr-40px-left">
+                                    <label for="contactChoice2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">9.</span>
+                                        <span>Все сотрудники, имеющие право подписи/визирования в вашем учреждении, имеют электронную подпись?</span>
+                                    </label>
+                                    <p>Электронная цифровая подпись (ЭЦП), позволяет подтвердить подлинность и закрепить юридическую значимость электронного документа.
+                                        Электронной подписью, позволяющей удостоверять документы в электронном виде обладают следующие сотрудники: - руководитель организации - заместители руководителя, имеющие право подписи; - иные сотрудники, получившие право подписи документов от имени организации в соответствии с уставом организации или по доверенности.
+                                        Пример: в случае отсутствия директора IT парка, ЭЦП за него может поставить заместитель директора или главный бухгалтер.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="main_form__radio-box">
+                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                    <label for="contactChoice1">Email</label>
+                                    <input type="radio" id="contactChoice2" name="contact" value="phone" class="mr-40px-left">
+                                    <label for="contactChoice2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">10.</span>
+                                        <span>Все сотрудники вашей организации подключены к системе электронного документооборота и используют ее по мере необходимости для исполнения своих должностных обязанностей?</span>
+                                    </label>
+                                    <p>'Выполнены следующие условия:
+                                        - У всего основного персонала ведомства есть учётные записи в системе электронного документооборота;
+                                        - Сотрудники обучены и умеют пользоваться системой и используют её по мере необходимости, осуществляя свои должностные обязанности.
+                                        Пример: вы можете отправить электронный документ с помощью системы электронного документооборота любому сотруднику из основного персонала ведомства.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="main_form__radio-box">
+                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                    <label for="contactChoice1">Email</label>
+                                    <input type="radio" id="contactChoice2" name="contact" value="phone" class="mr-40px-left">
+                                    <label for="contactChoice2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">4.</span>
+                                        <span>В организации существует ТЕХНИЧЕСКАЯ возможность к полному переводу внутреннего документооборота в электронный формат?</span>
+                                    </label>
+                                    <p>Выполнены следующие условия:
+                                        - В организации достаточно компьютеров;
+                                        - Все сотрудники прошли обучение и умеют пользоваться программой электронного документооборота;
+                                        - Организацией приобретено и развернуто лицензионное ПО системы электронного документооборота.
+                                        Пример: вы можете отправить электронный документ с помощью системы электронного документооборота любому сотруднику из основного персонала внутри ведомства. </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="main_form__radio-box">
+                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                    <label for="contactChoice1">Email</label>
+                                    <input type="radio" id="contactChoice2" name="contact" value="phone" class="mr-40px-left">
+                                    <label for="contactChoice2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="toggle_steps__item" data-toggle-step="2">
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">10.</span>
+                                        <span>Количество основного персонала (за исключением обслуживающего персонала)</span>
+                                    </label>
+                                    <p>Указывается общее число сотрудников. Данное число включает всех сотрудников ведомства за исключением обслуживающего персонала, чья работа не направлена напрямую на решение задач ведомства (уборщиков, водителей, охранников и т.д..).</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <input type="text" placeholder="Ввод..." class="main_form__input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_form__item">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="main_form__down-text">
+                                    <label for="id_organiz" class="d-flex">
+                                        <span class="main_form__number">6.</span>
+                                        <span>Количество основного персонала (за исключением обслуживающего персонала)</span>
+                                    </label>
+                                    <p>Указывается общее число сотрудников. Данное число включает всех сотрудников ведомства за исключением обслуживающего персонала, чья работа не направлена напрямую на решение задач ведомства (уборщиков, водителей, охранников и т.д..).</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="main_form__radio-box">
+                                    <input type="radio" id="contactChoice1" name="contact" value="email">
+                                    <label for="contactChoice1">Email</label>
+                                    <input type="radio" id="contactChoice2" name="contact" value="phone" class="mr-40px-left">
+                                    <label for="contactChoice2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer__content d-flex justify-content-center">
+                    <button type="button" class="main_form__submit-button" id="forToStep">
+                        Далее
+                    </button>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
