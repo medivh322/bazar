@@ -1,15 +1,17 @@
 $(document).ready(function() {
     let step = 1;
-    $("#forToStep").click((e) => {
-        if (step != 3) {
+    let count = $(".main_form").find("[data-toggle-step]").length;
+    $("#forToStep").on("click", (e) => {
+        if (step != count) {
             step++;
             $("[data-toggle-step="+ step +"]").addClass("active");
             $("[data-step-ellipse="+ step +"]").addClass("active");
             $("[data-step-ellipse]").not("[data-step-ellipse="+ step +"]").removeClass("active");
             $("[data-toggle-step="+ step +"]").siblings("[data-toggle-step]").removeClass("active");
-            (step == 3) ? $("#forToStep").removeAttr("type") : "";
         }
         else {
+            $("#forToStep").text("Сохранить анкету");
+            $("#forToStep").triggerHandler("click");
         }
     });
 
@@ -29,5 +31,8 @@ $(document).ready(function() {
         let param = list.parent(".main_form__select").attr("data-class-select");
         $("input."+param+"").val(zn);
         console.log( $("input."+param+"").val())
+    });
+    $("#dop_sotrudnik").click(() => {
+        
     });
 });

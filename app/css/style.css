@@ -148,13 +148,14 @@ table {
     background: #FFEDED; }
 
 .main_form__select {
+  height: 46px;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-items: start;
-  justify-content: center;
-  padding: 0 24px 0 0; }
+  /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: start;
+    justify-content: center;*/
+  padding: 0 24px 0 24px; }
 
 .main_form__select-list {
   display: none;
@@ -215,7 +216,7 @@ table {
   color: #373F41; }
 
 .main_form__down-text p {
-  margin: 20px 0 0 40px;
+  margin: 20px 0 0 51px;
   font-weight: normal;
   font-size: 13px;
   line-height: 30px;
@@ -382,3 +383,57 @@ table {
     height: 20px;
     background-position: center;
     left: -30px; }
+
+.dop-sotrudnik__item {
+  border-top: 3px solid #EA5E20;
+  margin: 60px 0 0 0; }
+
+.dop_sotrudnik {
+  background: none;
+  margin: 20px 0 0 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  height: 50px;
+  color: #EA5E20;
+  margin: 30px 0 0 60px;
+  width: 400px;
+  border: 1px solid #EA5E20;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center; }
+  .dop_sotrudnik:after {
+    content: "";
+    position: absolute;
+    background: url("../../images/plus.svg");
+    width: 20px;
+    left: 50px;
+    height: 20px;
+    background-position: left center; }
+
+.del_sotrudnik {
+  background: none;
+  margin: 20px 0 0 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  height: 50px;
+  color: #828282;
+  margin: 30px 0 0 60px;
+  width: 400px;
+  border: 1px solid #828282;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center; }
+  .del_sotrudnik:after {
+    content: "";
+    position: absolute;
+    background: url("../../images/cross.svg");
+    width: 20px;
+    left: 50px;
+    height: 20px;
+    background-position: left center; }
