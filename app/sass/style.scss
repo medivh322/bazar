@@ -149,10 +149,18 @@ table {
 }
 
 .main_form__select-main {
-    background-image: url("../../images/triangle.svg");
-    background-repeat: no-repeat;
-    background-position: center right;
     width: 100%;
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+         background-image: url("../../images/triangle.svg");
+         width: 14px;
+    height: 10px;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 18px;
+    }
 }
 
 .main_form__select {
@@ -172,17 +180,21 @@ table {
 .main_form__select {
     height: 46px;
     cursor: pointer;
+    position: relative;
     /*display: flex;
     flex-direction: column;
     align-items: center;
     align-items: start;
     justify-content: center;*/
-    padding: 0 24px 0 24px;
+   /* padding: 0 24px 0 24px;*/
 }
 
 .main_form__select-list {
     display: none;
     width: 100%;
+    position: absolute;
+    z-index: 2;
+    background-color: #EFEFEF;
 }
 
 .main_form__select-list{
@@ -196,7 +208,7 @@ table {
 .main_form__select {
     height: auto;
     li{
-        padding: 24px;
+        padding: 14px 14px 14px 14px;
     }
 }
 

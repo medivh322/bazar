@@ -16,6 +16,7 @@ $(document).ready(function() {
     });
 
     $(".main_form__select").click(() => {
+        console.log("+");
         if ($(this).find(".main_form__select-list").css("display") == "none"){
             $(this).find(".main_form__select-list").toggle("fast", function(){
 
@@ -24,15 +25,12 @@ $(document).ready(function() {
     });
     $(".main_form__select-list li").click((e) => {
         let zn = event.target.innerHTML;
+        let attrZn = event.target.getAttribute("data-val-id");
         let list = $(this).find(".main_form__select-list");
         $(this).find(".main_form__select-list").toggle("fast", function(){
         });
         list.siblings(".main_form__select-main").text(zn);
         let param = list.parent(".main_form__select").attr("data-class-select");
-        $("input."+param+"").val(zn);
-        console.log( $("input."+param+"").val())
-    });
-    $("#dop_sotrudnik").click(() => {
-        
+        $("input."+param+"").val(attrZn);
     });
 });

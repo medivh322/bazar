@@ -9,6 +9,7 @@
     <script src="include/jquery/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="app/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="app/js/script.js"></script>
 </head>
 
 <body>
@@ -40,14 +41,25 @@
                     <div class="row">
                         <div class="col-lg-5">
                             <label for="id_organiz">
-                        		<span class="main_form__number">1.</span>
+                                <span class="main_form__number">1.</span>
                                 <span>Выберите вашу организацию</span>
                             </label>
                         </div>
                         <div class="col-lg-7">
-                            <select name="" id="id_organiz" class="main_form__select">
+                            <input type="text" class="selector" hidden name="+">
+                            <ul class="main_form__select" data-class-select="selector">
+                                <li class="main_form__select-main">
+                                    Все подразделения
+                                </li>
+                                <div class="main_form__select-list">
+                                    <li data-val-id="24">Подразделение #1</li>
+                                    <li data-val-id="55">Подразделение #2</li>
+                                    <li data-val-id="101">Подразделение #4</li>
+                                </div>
+                            </ul>
+                           <!--  <select name="" id="id_organiz" class="main_form__select">
                                 <option value="Выбор" selected="selected">Выбор</option>
-                            </select>
+                            </select> -->
                         </div>
                     </div>
                 </div>
@@ -99,13 +111,13 @@
                 </div>
             </div>
             <div class="footer">
-            	<div class="container d-flex flex-column align-items-center">
-            		<div class="main_form__checkbox-box">
-            			<input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
-    					<label for="subscribeNews">Я даю согласие на обработку моих персональных данных.</label>
-            		</div>
-            		<input type="submit" class="main_form__submit-button" value="Далее">	
-            	</div>	
+                <div class="container d-flex flex-column align-items-center">
+                    <div class="main_form__checkbox-box">
+                        <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+                        <label for="subscribeNews">Я даю согласие на обработку моих персональных данных.</label>
+                    </div>
+                    <input type="submit" class="main_form__submit-button" value="Далее">
+                </div>
             </div>
         </form>
     </main>
