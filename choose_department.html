@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="include/bootstrap/bootstrap-grid.css">
@@ -10,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="app/js/script.js"></script>
 </head>
+
 <body>
-	<header class="header">
+    <header class="header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -20,16 +22,40 @@
                         <img src="images/itpark-logo.svg" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-flex flex-column align-items-end">
                     <div class="header__text">
                         ЛИЧНЫЙ КАБИНЕТ
                     </div>
                     <a href="#" class="onsubmit_header">
-                    	Выход
+                        Выход
                     </a>
                 </div>
             </div>
         </div>
     </header>
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <form action="#">
+                        <h2 class="main__h2">Выберите подразделение</h2>
+                        <input type="text" class="selector" hidden name="+">
+                        <ul class="main_form__select" data-class-select="selector">
+                            <li class="main_form__select-main">
+                                Все подразделения
+                            </li>
+                            <div class="main_form__select-list">
+                                <li>Подразделение #1</li>
+                                <li>Подразделение #2</li>
+                                <li>Подразделение #4</li>
+                            </div>
+                        </ul>
+                        <input type="submit" name="" value="Скачать" class="main_form__submit-button" style="width: 100%;"> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
